@@ -1,0 +1,1296 @@
+{
+  "plan_name": "Ingles de Viaje",
+  "weeks": [
+    {
+      "week_number": 1,
+      "week_title": "🌱 Primeros pasos",
+      "week_description": "Introducción a conceptos básicos del inglés",
+      "days": [
+        {
+          "day_number": 1,
+          "day_title": "Saludos y Presentaciones",
+          "day_description": "Aprender a saludar y presentarse",
+          "sections": {
+            "vocabulary": {
+              "description": "15 palabras de saludo"
+            },
+            "phrases": {
+              "description": "15 frases de presentación"
+            },
+            "reading": {
+              "description": "4 diálogos cortos"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 2,
+          "day_title": "Números y Colores",
+          "day_description": "Introducción a números y colores básicos",
+          "sections": {
+            "vocabulary": {
+              "description": "15 palabras sobre números y colores"
+            },
+            "phrases": {
+              "description": "10 frases usando números y colores"
+            },
+            "reading": {
+              "description": "4 diálogos con números y colores"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 3,
+          "day_title": "La Familia",
+          "day_description": "Describir a los miembros de la familia",
+          "sections": {
+            "vocabulary": {
+              "description": "15 palabras relacionadas con la familia"
+            },
+            "phrases": {
+              "description": "15 frases sobre la familia"
+            },
+            "reading": {
+              "description": "4 diálogos sobre la familia"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 4,
+          "day_title": "Comidas y Bebidas",
+          "day_description": "Vocabulario de comida y bebida esencial",
+          "sections": {
+            "vocabulary": {
+              "description": "15 palabras sobre comidas y bebidas"
+            },
+            "phrases": {
+              "description": "15 frases para ordenar en restaurantes"
+            },
+            "reading": {
+              "description": "4 diálogos en restaurantes"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 5,
+          "day_title": "Días de la Semana",
+          "day_description": "Aprender los días y expresiones de tiempo",
+          "sections": {
+            "vocabulary": {
+              "description": "15 palabras sobre el tiempo"
+            },
+            "phrases": {
+              "description": "15 frases con días de la semana"
+            },
+            "reading": {
+              "description": "4 diálogos planeando actividades"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 6,
+          "day_title": "Direcciones y Transporte",
+          "day_description": "Pedir y dar direcciones, y vocabulario de transporte",
+          "sections": {
+            "vocabulary": {
+              "description": "15 palabras sobre transporte"
+            },
+            "phrases": {
+              "description": "15 frases para moverse por la ciudad"
+            },
+            "reading": {
+              "description": "4 diálogos pidiendo direcciones"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 7,
+          "day_title": "Repaso de la Semana",
+          "day_description": "Repasar y reforzar lo aprendido durante la semana",
+          "sections": {
+            "vocabulary": {
+              "description": ""
+            },
+            "phrases": {
+              "description": ""
+            },
+            "reading": {
+              "description": "4 conversaciones de repaso"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios de repaso"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "week_number": 2,
+      "week_title": "📚 En la Ciudad",
+      "week_description": "Explorar lugares y situaciones comunes en una ciudad",
+      "days": [
+        {
+          "day_number": 1,
+          "day_title": "Tiendas y Compras",
+          "day_description": "Aprender vocabulario para ir de compras",
+          "sections": {
+            "vocabulary": {
+              "description": "15 palabras sobre tiendas"
+            },
+            "phrases": {
+              "description": "15 frases para hacer compras"
+            },
+            "reading": {
+              "description": "4 diálogos en tiendas"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 2,
+          "day_title": "En el Restaurante",
+          "day_description": "Frases y vocabulario para usar en el restaurante",
+          "sections": {
+            "vocabulary": {
+              "description": "15 palabras sobre comida"
+            },
+            "phrases": {
+              "description": "15 frases para ordenar comida"
+            },
+            "reading": {
+              "description": "4 diálogos en restaurantes"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 3,
+          "day_title": "En el Banco",
+          "day_description": "Vocabulario para transacciones bancarias",
+          "sections": {
+            "vocabulary": {
+              "description": "15 palabras sobre banca"
+            },
+            "phrases": {
+              "description": "15 frases útiles en el banco"
+            },
+            "reading": {
+              "description": "4 diálogos en el banco"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 4,
+          "day_title": "Visitar el doctor",
+          "day_description": "Vocabulario para una visita médica",
+          "sections": {
+            "vocabulary": {
+              "description": "15 palabras médicas"
+            },
+            "phrases": {
+              "description": "15 frases para describir síntomas"
+            },
+            "reading": {
+              "description": "3 ejercicios de escritura"
+            },
+            "writing": {
+              "description": "10 ejercicios de repaso"
+            },
+            "worksheet": {}
+          }
+        },
+        {
+          "day_number": 5,
+          "day_title": "En el trabajo",
+          "day_description": "Vocabulario y frases para ambientes laborales",
+          "sections": {
+            "vocabulary": {
+              "description": "15 palabras sobre el trabajo"
+            },
+            "phrases": {
+              "description": "15 frases en situaciones laborales"
+            },
+            "reading": {
+              "description": "4 diálogos en el trabajo"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 6,
+          "day_title": "Emergencias",
+          "day_description": "Aprender frases clave para emergencias",
+          "sections": {
+            "vocabulary": {
+              "description": "15 palabras sobre emergencias"
+            },
+            "phrases": {
+              "description": "15 frases de emergencia"
+            },
+            "reading": {
+              "description": "4 diálogos de emergencia"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 7,
+          "day_title": "Repaso de la Semana",
+          "day_description": "Repaso de vocabulario y frases útiles",
+          "sections": {
+            "vocabulary": {
+              "description": ""
+            },
+            "phrases": {
+              "description": ""
+            },
+            "reading": {
+              "description": "4 diálogos de repaso"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios de repaso"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "week_number": 3,
+      "week_title": "📘 Conversación",
+      "week_description": "Desarrollo de habilidades conversacionales",
+      "days": [
+        {
+          "day_number": 1,
+          "day_title": "Iniciar Conversación",
+          "day_description": "Cómo iniciar conversaciones en inglés",
+          "sections": {
+            "vocabulary": {
+              "description": "15 palabras clave"
+            },
+            "phrases": {
+              "description": "15 frases para iniciar conversación"
+            },
+            "reading": {
+              "description": "4 diálogos iniciales"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 2,
+          "day_title": "Hablar de Gustos",
+          "day_description": "Expresar gustos y preferencias personales",
+          "sections": {
+            "vocabulary": {
+              "description": "15 palabras sobre preferencias"
+            },
+            "phrases": {
+              "description": "15 frases sobre gustos"
+            },
+            "reading": {
+              "description": "4 diálogos sobre gustos"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 3,
+          "day_title": "Expresar Opiniones",
+          "day_description": "Aprender a compartir opiniones",
+          "sections": {
+            "vocabulary": {
+              "description": "15 palabras de opinión"
+            },
+            "phrases": {
+              "description": "15 frases para expresar opiniones"
+            },
+            "reading": {
+              "description": "4 diálogos de opinión"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 4,
+          "day_title": "Hablar sobre el Pasado",
+          "day_description": "Uso del pasado simple",
+          "sections": {
+            "vocabulary": {
+              "description": "15 palabras clave del pasado"
+            },
+            "phrases": {
+              "description": "15 frases en pasado"
+            },
+            "reading": {
+              "description": "4 diálogos en pasado"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 5,
+          "day_title": "Futuros Planes",
+          "day_description": "Discutir planes y usar el futuro",
+          "sections": {
+            "vocabulary": {
+              "description": "15 palabras sobre el futuro"
+            },
+            "phrases": {
+              "description": "15 frases de futuro"
+            },
+            "reading": {
+              "description": "4 diálogos sobre planes futuros"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 6,
+          "day_title": "Contar Historias",
+          "day_description": "Construir y contar historias en inglés",
+          "sections": {
+            "vocabulary": {
+              "description": "15 palabras para historias"
+            },
+            "phrases": {
+              "description": "15 frases para narrar"
+            },
+            "reading": {
+              "description": "4 diálogos narrativos"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 7,
+          "day_title": "Repaso de la Semana",
+          "day_description": "Repaso intensivo de la semana",
+          "sections": {
+            "vocabulary": {
+              "description": ""
+            },
+            "phrases": {
+              "description": ""
+            },
+            "reading": {
+              "description": "4 diálogos completos"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios de repaso"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "week_number": 4,
+      "week_title": "📗 Gramática Básica",
+      "week_description": "Fundamentos gramaticales para comunicarse efectivamente",
+      "days": [
+        {
+          "day_number": 1,
+          "day_title": "Artículos y Sustantivos",
+          "day_description": "Uso de artículos definidos e indefinidos y sustantivos",
+          "sections": {
+            "vocabulary": {
+              "description": "15 palabras y reglas gramaticales"
+            },
+            "phrases": {
+              "description": "15 frases con artículos"
+            },
+            "reading": {
+              "description": "4 diálogos usando artículos"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 2,
+          "day_title": "Pronombres",
+          "day_description": "Uso de pronombres personales y posesivos",
+          "sections": {
+            "vocabulary": {
+              "description": "15 palabras sobre pronombres"
+            },
+            "phrases": {
+              "description": "15 frases con pronombres"
+            },
+            "reading": {
+              "description": "4 diálogos con pronombres"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 3,
+          "day_title": "Verbos Comunes",
+          "day_description": "Verbos comunes en presente",
+          "sections": {
+            "vocabulary": {
+              "description": "15 verbos esenciales"
+            },
+            "phrases": {
+              "description": "15 frases con verbos"
+            },
+            "reading": {
+              "description": "4 diálogos con verbos"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 4,
+          "day_title": "Preguntas básicas",
+          "day_description": "Formular preguntas en inglés",
+          "sections": {
+            "vocabulary": {
+              "description": "15 palabras y estructuras"
+            },
+            "phrases": {
+              "description": "15 frases para preguntas"
+            },
+            "reading": {
+              "description": "4 diálogos de preguntas"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 5,
+          "day_title": "Preposiciones",
+          "day_description": "Uso de preposiciones de lugar y tiempo",
+          "sections": {
+            "vocabulary": {
+              "description": "15 preposiciones clave"
+            },
+            "phrases": {
+              "description": "15 frases con preposiciones"
+            },
+            "reading": {
+              "description": "4 diálogos usando preposiciones"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 6,
+          "day_title": "Adjetivos Comunes",
+          "day_description": "Describir cosas y personas",
+          "sections": {
+            "vocabulary": {
+              "description": "15 adjetivos útiles"
+            },
+            "phrases": {
+              "description": "15 frases con adjetivos"
+            },
+            "reading": {
+              "description": "4 diálogos con descripciones"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 7,
+          "day_title": "Repaso de la Semana",
+          "day_description": "Refuerzo de lo aprendido en gramática",
+          "sections": {
+            "vocabulary": {
+              "description": ""
+            },
+            "phrases": {
+              "description": ""
+            },
+            "reading": {
+              "description": "4 diálogos de repaso"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios de repaso"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "week_number": 5,
+      "week_title": "📒 Practicas diálogos",
+      "week_description": "Conversaciones en diferentes escenarios",
+      "days": [
+        {
+          "day_number": 1,
+          "day_title": "En el Aeropuerto",
+          "day_description": "Dialogar en situaciones de viaje",
+          "sections": {
+            "vocabulary": {
+              "description": "15 palabras del aeropuerto"
+            },
+            "phrases": {
+              "description": "15 frases en el aeropuerto"
+            },
+            "reading": {
+              "description": "4 diálogos en el aeropuerto"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 2,
+          "day_title": "En el Hotel",
+          "day_description": "Recepción y servicios en el hotel",
+          "sections": {
+            "vocabulary": {
+              "description": "15 palabras del hotel"
+            },
+            "phrases": {
+              "description": "15 frases en el hotel"
+            },
+            "reading": {
+              "description": "4 diálogos en el hotel"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 3,
+          "day_title": "Turismo en la Ciudad",
+          "day_description": "Explorar y preguntar por lugares turísticos",
+          "sections": {
+            "vocabulary": {
+              "description": "15 palabras turísticas"
+            },
+            "phrases": {
+              "description": "15 frases para turismo"
+            },
+            "reading": {
+              "description": "4 diálogs turísticos"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 4,
+          "day_title": "Compras en el Supermercado",
+          "day_description": "Vocabulario y diálogos para hacer compras",
+          "sections": {
+            "vocabulary": {
+              "description": "15 palabras de supermercado"
+            },
+            "phrases": {
+              "description": "15 frases para comprar"
+            },
+            "reading": {
+              "description": "4 diálogos en el supermercado"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 5,
+          "day_title": "En el Parque",
+          "day_description": "Interactuar en espacios públicos",
+          "sections": {
+            "vocabulary": {
+              "description": "15 palabras del parque"
+            },
+            "phrases": {
+              "description": "15 frases en el parque"
+            },
+            "reading": {
+              "description": "4 diálogos en el parque"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 6,
+          "day_title": "Ordenando Café",
+          "day_description": "Aprender a ordenar en cafeterías",
+          "sections": {
+            "vocabulary": {
+              "description": "15 palabras de cafetería"
+            },
+            "phrases": {
+              "description": "15 frases para ordenar café"
+            },
+            "reading": {
+              "description": "4 diálogs en cafeterías"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 7,
+          "day_title": "Repaso de la Semana",
+          "day_description": "Practica y repaso de conversaciones de la semana",
+          "sections": {
+            "vocabulary": {
+              "description": ""
+            },
+            "phrases": {
+              "description": ""
+            },
+            "reading": {
+              "description": "4 diálogos repasando escenarios"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejerciciudades prácticas"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "week_number": 6,
+      "week_title": "📘 Expresiones Comunes",
+      "week_description": "Aprender modismos y expresiones típicas",
+      "days": [
+        {
+          "day_number": 1,
+          "day_title": "Expresiones de Tiempo",
+          "day_description": "Expresiones comunes relacionadas con el tiempo",
+          "sections": {
+            "vocabulary": {
+              "description": "15 expresiones de tiempo"
+            },
+            "phrases": {
+              "description": "15 frases sobre el tiempo"
+            },
+            "reading": {
+              "description": "4 diálogos usando expresiones de tiempo"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 2,
+          "day_title": "Expresiones de Cortesía",
+          "day_description": "Aprender modismos para ser cortés",
+          "sections": {
+            "vocabulary": {
+              "description": "15 expresiones de cortesía"
+            },
+            "phrases": {
+              "description": "15 frases corteses"
+            },
+            "reading": {
+              "description": "4 diálogos con cortesía"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 3,
+          "day_title": "Expresiones de Acuerdo/Desacuerdo",
+          "day_description": "Cómo expresar acuerdo o desacuerdo",
+          "sections": {
+            "vocabulary": {
+              "description": "15 expresiones de acuerdo"
+            },
+            "phrases": {
+              "description": "15 frases de desacuerdo"
+            },
+            "reading": {
+              "description": "4 diálogos sobre acuerdo/desacuerdo"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 4,
+          "day_title": "Expresiones para Pedir Ayuda",
+          "day_description": "Frases útiles para solicitar ayuda",
+          "sections": {
+            "vocabulary": {
+              "description": "15 expresiones de ayuda"
+            },
+            "phrases": {
+              "description": "15 frases para pedir ayuda"
+            },
+            "reading": {
+              "description": "4 diálogos pidiendo ayuda"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 5,
+          "day_title": "Expresiones de Emociones",
+          "day_description": "Comunicar sentimientos y emociones",
+          "sections": {
+            "vocabulary": {
+              "description": "15 expresiones emocionales"
+            },
+            "phrases": {
+              "description": "15 frases sobre emociones"
+            },
+            "reading": {
+              "description": "4 diálogos sobre emociones"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 6,
+          "day_title": "Lenguaje Col",
+          "sections": {
+            "vocabulary": {},
+            "phrases": {},
+            "reading": {},
+            "writing": {},
+            "worksheet": {}
+          }
+        },
+        {
+          "day_number": 15,
+          "day_title": "15 frases coloquiales",
+          "day_description": "4 diálogos usando coloquialismos",
+          "sections": {
+            "vocabulary": {
+              "description": "3 ejercicios de escritura"
+            },
+            "phrases": {
+              "description": "10 ejercicios prácticos"
+            },
+            "reading": {},
+            "writing": {},
+            "worksheet": {}
+          }
+        },
+        {
+          "day_number": 7,
+          "day_title": "Repaso de la Semana",
+          "day_description": "Consolidar el uso de expresiones y modismos",
+          "sections": {
+            "vocabulary": {
+              "description": ""
+            },
+            "phrases": {
+              "description": ""
+            },
+            "reading": {
+              "description": "4 diálogos de repaso"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios de repaso"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "week_number": 7,
+      "week_title": "📕 Escucha y Pronunciación",
+      "week_description": "Mejorar la comprensión y pronunciación",
+      "days": [
+        {
+          "day_number": 1,
+          "day_title": "Sonidos Básicos",
+          "day_description": "Práctica de sonidos difíciles para hispanohablantes",
+          "sections": {
+            "vocabulary": {
+              "description": "15 sonidos clave"
+            },
+            "phrases": {
+              "description": "15 frases para práctica de sonidos"
+            },
+            "reading": {
+              "description": "4 diálogos enfocados en sonidos"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 2,
+          "day_title": "Acento y Entonación",
+          "day_description": "Trabajar el acento y la entonación en inglés",
+          "sections": {
+            "vocabulary": {
+              "description": "15 aspectos de entonación"
+            },
+            "phrases": {
+              "description": "15 frases con variación de tono"
+            },
+            "reading": {
+              "description": "4 diálogos con entonación"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 3,
+          "day_title": "Escucha Activa",
+          "day_description": "Ejercicios para mejorar la escucha en inglés",
+          "sections": {
+            "vocabulary": {
+              "description": "15 ejercicios de escucha"
+            },
+            "phrases": {
+              "description": "15 diálogos para escucha activa"
+            },
+            "reading": {
+              "description": "4 diálogos con enfoque en escuchar"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 4,
+          "day_title": "Diálogos Telefónicos",
+          "day_description": "Practicar conversaciones por teléfono",
+          "sections": {
+            "vocabulary": {
+              "description": "15 frases telefónicas"
+            },
+            "phrases": {
+              "description": "15 diálogos telefónicos"
+            },
+            "reading": {
+              "description": "4 diálogos en teléfono"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 5,
+          "day_title": "Pronunciación en Práctica",
+          "day_description": "Aplicar la pronunciación en situaciones reales",
+          "sections": {
+            "vocabulary": {
+              "description": "15 términos de pronunciación"
+            },
+            "phrases": {
+              "description": "15 frases para pronunciar correctamente"
+            },
+            "reading": {
+              "description": "4 diálogos de práctica"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 6,
+          "day_title": "Comprender Instrucciones",
+          "day_description": "Entender y seguir instrucciones en inglés",
+          "sections": {
+            "vocabulary": {
+              "description": "15 vocablos de instrucciones"
+            },
+            "phrases": {
+              "description": "15 frases para instrucciones"
+            },
+            "reading": {
+              "description": "4 diálogos siguiendo instrucciones"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 7,
+          "day_title": "Repaso de la Semana",
+          "day_description": "Refuerzo de habilidades de escucha y pronunciación",
+          "sections": {
+            "vocabulary": {
+              "description": ""
+            },
+            "phrases": {
+              "description": ""
+            },
+            "reading": {
+              "description": "4 conversaciones de repaso"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios de repaso"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "week_number": 8,
+      "week_title": "📔 Evaluación y Práctica",
+      "week_description": "Revisar y aplicar lo aprendido en situaciones reales",
+      "days": [
+        {
+          "day_number": 1,
+          "day_title": "Evaluación de Vocabulario",
+          "day_description": "Evaluar el conocimiento de vocabulario adquirido",
+          "sections": {
+            "vocabulary": {
+              "description": "15 palabras clave"
+            },
+            "phrases": {
+              "description": "15 frases de revisión"
+            },
+            "reading": {
+              "description": "4 diálogos de evaluación"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 2,
+          "day_title": "Evaluación de Frases",
+          "day_description": "Revisar el uso de frases en contexto",
+          "sections": {
+            "vocabulary": {
+              "description": "15 frases importantes"
+            },
+            "phrases": {
+              "description": "15 diálogos de evaluación"
+            },
+            "reading": {
+              "description": "4 conversaciones clave"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 3,
+          "day_title": "Práctica de Conversación",
+          "day_description": "Conversaciones simuladas para practicar",
+          "sections": {
+            "vocabulary": {
+              "description": "15 temas de conversación"
+            },
+            "phrases": {
+              "description": "15 escenarios de diálogo"
+            },
+            "reading": {
+              "description": "4 prácticas de conversación"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 4,
+          "day_title": "Prueba de Escucha",
+          "day_description": "Ejercicios para evaluar la comprensión auditiva",
+          "sections": {
+            "vocabulary": {
+              "description": "15 pistas de audio"
+            },
+            "phrases": {
+              "description": "15 preguntas de comprensión"
+            },
+            "reading": {
+              "description": "4 audios clave"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 5,
+          "day_title": "Revisión de Gramática",
+          "day_description": "Repasar aspectos gramaticales esenciales",
+          "sections": {
+            "vocabulary": {
+              "description": "15 reglas gramátiles"
+            },
+            "phrases": {
+              "description": "15 ejercicios de gramática"
+            },
+            "reading": {
+              "description": "4 diálogos con enfoque gramatical"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 6,
+          "day_title": "Evaluación Final",
+          "day_description": "Examen integral para valorar el progreso",
+          "sections": {
+            "vocabulary": {
+              "description": "Resumen de lo aprendido"
+            },
+            "phrases": {
+              "description": "Prueba comprensiva"
+            },
+            "reading": {
+              "description": "3 conversaciones de evaluación"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios prácticos"
+            }
+          }
+        },
+        {
+          "day_number": 7,
+          "day_title": "Reflexión y Futuro",
+          "day_description": "Planificar los siguientes pasos en el aprendizaje",
+          "sections": {
+            "vocabulary": {
+              "description": ""
+            },
+            "phrases": {
+              "description": "Diálogo sobre experiencias de aprendizaje"
+            },
+            "reading": {
+              "description": "Planeación futura"
+            },
+            "writing": {
+              "description": "3 ejercicios de escritura"
+            },
+            "worksheet": {
+              "description": "10 ejercicios de revisión"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
