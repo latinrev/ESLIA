@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={outfit.className}>
-        <main className="flex h-full min-h-screen flex-col items-center justify-center bg-bg px-40 py-20">
+        <main className="flex h-full min-h-screen flex-col items-center justify-center overflow-x-hidden bg-bg px-40 py-20">
           <Providers>{children}</Providers>
         </main>
       </body>

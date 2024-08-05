@@ -1,64 +1,35 @@
+import { generateWithPrompt } from "@/utils/ai/generateWithPrompt";
 import { parseLearningSyllabus } from "@/utils/plan/parsePlan";
+import { createClient } from "@/utils/supabase/server";
 
-export const getPlan = async (supabase) => {
+export const getWorksheets = async (supabase) => {
   const userId = (await supabase.auth.getUser()).data.user?.id;
   const { data, error } = await supabase
-    .from("plans")
-    .select(`
-      id,
-      name,
-      generating,
-      weeks(
-        id,
-        number,
-        title,
-        description
-      )
-    `)
-    .eq("user_id", userId)
-    .single();
+    .from("worksheets")
+    .select(`title,description,id,emoji`)
+    .eq("user_id", userId).order('created_at', { ascending: false })
+  console.log("FETCHING WORKSHEETS")
 
   if (error) {
     console.error("Error fetching plans:", error);
     return { data: null, error };
   }
-
-  // Sort the weeks by the number field
-  if (data && data.weeks) {
-    data.weeks.sort((a, b) => a.number - b.number);
-
-  }
-
   return { data, error };
 };
 
-export const getWeek = async ({ supabase, weekId }) => {
-
+export const getWorksheet = async ({ supabase, id }) => {
   const userId = (await supabase.auth.getUser()).data.user?.id;
   const { data, error } = await supabase
-    .from("days")
-    .select(`*`).eq("week_id", weekId).order('number', { descending: true })
+    .from("worksheets")
+    .select(`*`)
+    .eq('id', id)
+    .eq("user_id", userId).order('created_at', { ascending: false }).single()
+  console.log("FETCHING WORKSHEETS")
 
   if (error) {
     console.error("Error fetching plans:", error);
     return { data: null, error };
   }
-  return { data, error }
-}
-
-export const getDay = async ({ supabase, weekId, dayId }) => {
-  const userId = (await supabase.auth.getUser()).data.user?.id;
-  const { data, error, ...props } = await supabase
-    .from("days")
-    .select(`*`).eq("week_id", weekId).eq("id", dayId).order('number', { descending: true }).single()
-
-  if (error) {
-    console.error("Error fetching plans:", error);
-    return { data: null, error };
-  }
-  return { data, error, ...props }
-}
-
-
-
+  return { data, error };
+};
 

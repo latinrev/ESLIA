@@ -6,6 +6,12 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --color-primary: #22ff60;
+  --color-secondary: #071333;
+  --color-bg: #131313;
+  --color-textPrimary: #ffffff;
+  --color-textSecondary: #071333;
+  --color-textContrast: #22ff60;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,16 +24,17 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer components {
+  .center {
+    @apply flex items-center justify-center;
   }
 }

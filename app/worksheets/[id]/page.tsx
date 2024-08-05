@@ -1,20 +1,20 @@
 import { dehydrate, HydrationBoundary, QueryClient } from "@tanstack/react-query";
-import { getWeek } from "@/actions/calls";
+import { getWorksheet, getWorksheets } from "@/actions/calls";
 import { createClient } from "@/utils/supabase/server";
-import Week from "./week";
+import Worksheet from "./worksheet";
 
-export default async function WeekPage({ params }) {
+export default async function PlanPage({ params }) {
   const supabase = createClient();
   const queryClient = new QueryClient();
 
   await queryClient.prefetchQuery({
-    queryKey: ["week"],
-    queryFn: async () => await getWeek({ supabase, weekId: params.weekid }),
+    queryKey: ["worksheet", params.id],
+    queryFn: async () => await getWorksheet({ supabase, id: params.id }),
   });
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
-      <Week id={params.weekid} />
+      <Worksheet id={params.id} />
     </HydrationBoundary>
   );
 }

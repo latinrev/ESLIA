@@ -1,8 +1,20 @@
-export const vocabularyPrompt = ({ day, title, description, order }) => `Generate content for an English lesson with the following details:
-Day: ${day}
-Title: ${title}
-Description: ${description}
-Order: ${order}
+
+
+export const titlePrompt = ({ topic, level }: { topic: string, level: string }) => `Generate a title for an English(for a native Spanish speaker) with the following details, the instructions should be in Spanish:
+Topic: ${topic}
+Level: ${level}
+{
+  "title": "",The title should specify this is for ESL and should specify this is relevant for learning english
+  "description": "" // The description should specify this is for ESL and should specify this is a worksheet or "Hoja de ejercicios"
+  "emoji: "" // A single emoji character
+}
+Do not wrap the json codes in JSON markers  
+`;
+
+
+export const vocabularyPrompt = ({ topic, level }: { topic: string, level: string }) => `Generate content for an English(for a native Spanish speaker) lesson with the following details the instructions should be in Spanish:
+Topic: ${topic}
+Level: ${level}
 
 Provide 7-10 key words for the vocabulary section. Respond in this JSON format:
 {
@@ -12,198 +24,59 @@ Provide 7-10 key words for the vocabulary section. Respond in this JSON format:
       "transcription": "",
       "translation": "",
       "example": ""
+      "exampleTranslation": ""
     }
   ]
 }
 Do not wrap the json codes in JSON markers  
 `;
 
-export const phrasesPrompt = ({
-  day,
-  title,
-  description,
-  vocabulary,
-  order,
-}) => `Generate content for an English lesson with the following details:
-Day: ${day}
-Title: ${title}
-Description: ${description}
-The vocabulary for this lesson includes: [${vocabulary.join(", ")}]
-Order: ${order}
-
-Provide 5-7 useful phrases, incorporating some of the vocabulary words. Respond in this JSON format:
-{
-  "phrases": [
-    {
-      "phrase": "",
-      "transcription": "",
-      "translation": ""
-    }
-  ]
-}
-Do not wrap the json codes in JSON markers  
-  
-`;
-
-export const grammarPrompt = ({
-  day,
-  title,
-  description,
-  vocabulary,
-  phrases,
-  order,
-}) => `Generate content for an English lesson with the following details:
-Day: ${day}
-Title: ${title}
-Description: ${description}
-The vocabulary for this lesson includes: [${vocabulary.join(", ")}]
-The phrases include: [${phrases.join(", ")}]
-Order: ${order}
-
-Provide a grammar point related to the lesson theme, with examples and practice questions. Use the vocabulary and phrases where appropriate. Respond in this JSON format:
-{
-  "grammar": {
-    "topic": "",
-    "explanation": "",
-    "examples": [
-      {
-        "spanish": "",
-        "english": ""
-      }
-    ],
-    "practice": [
-      {
-        "question": "",
-        "answer": ""
-      }
-    ]
-  }
-}
-Do not wrap the json codes in JSON markers  
-  
-`;
-
-export const readingPrompt = ({
-  day,
-  title,
-  description,
-  vocabulary,
-  phrases,
-  grammar,
-  order,
-}) => `Generate content for an English lesson with the following details:
-Day: ${day}
-Title: ${title}
-Description: ${description}
-The vocabulary for this lesson includes: [${vocabulary.join(", ")}]
-The phrases include: [${phrases.join(", ")}]
-The Grammar include: [${grammar.join(", ")}]
-Order: ${order}
-
-Provide 4 short dialogues related to the lesson theme, incorporating the vocabulary and phrases. Include vocabulary and questions for each. Respond in this JSON format:
-{
-  "reading": [
-    {
-      "text": "",
-      "vocabulary": [
-        {
-          "word": "",
-          "translation": ""
-        }
-      ],
-      "questions": [
-        {
-          "question": "",
-          "answer": ""
-        }
-      ]
-    }
-  ]
-}
-Do not wrap the json codes in JSON markers  
-  
-`;
-
-export const writingPrompt = ({
-  day,
-  title,
-  description,
-  vocabulary,
-  phrases,
-  grammar,
-  reading,
-  order,
-}) => `Generate content for an English lesson with the following details:
-Day: ${day}
-Title: ${title}
-Description: ${description}
-The vocabulary for this lesson includes: [${vocabulary.join(", ")}]
-The phrases include: [${phrases.join(", ")}]
-The Grammar include: [${grammar.join(", ")}]
-The reading include: [${reading.join(", ")}]
-Order: ${order}
-
-Provide 3 writing exercises related to the lesson theme, incorporating elements from the previous sections. Respond in this JSON format:
-{
-  "writing": [
-    {
-      "type": "",
-      "instruction": "",
-      "content": "",
-      "feedback": ""
-    }
-  ]
-}
-Do not wrap the json codes in JSON markers  
-  
-`;
-
-
-//The phrases include: [${ phrases.join(", ") }]
-// The Grammar include: [${grammar.join(", ")}]
-// The reading include: [${reading.join(", ")}]
-// The writing include: [${writing.join(", ")}]
+//
+//I really hoped to have enough time for this, but I'm running out of time. I'm sorry.
+// {
+//   "type": "matching",
+//     "data": {
+//     "pairs": [
+//       { "item": "", "match": "" }, // Item should be in spanish, match should be in english
+//       { "item": "", "match": "" },
+//       { "item": "", "match": "" },
+//       { "item": "", "match": "" }
+//     ]
+//   }
+// },
 export const worksheetPrompt = ({
-  day,
-  title,
-  description,
+  topic,
   vocabulary,
-  phrases,
-  grammar,
-  reading,
-  writing,
-  order,
-}) => `Generate content for an English lesson with the following details:
-Day: ${day}
-Title: ${title}
-Description: ${description}
+  level
+}: { topic: string, vocabulary: [], level: string }) => `Generate content for an English lesson with the following details the instructions:
+Topic: ${topic}
 The vocabulary for this lesson includes: [${vocabulary.join(", ")}]
-// 
-Order: ${order}
+Level: ${level}
+THIS IS FOR AN ESL LESSON WORKSHEET, the worksheet must have exercises related to the vocabulary words, this for a native Spanish speaker learning English, should only have exercises related to the vocabulary words, keep the responses for beginner single worded.
 
-Provide 5-7 exercises related to the lesson theme, choosing from the following types: multipleChoice, fillInTheBlank, and translation. Respond in this JSON format:
+
+Provide 5-7 exercises related to the lesson theme, choosing from the following types: multipleChoice and fillInTheBlankWithOptions Respond in this JSON format:
 {
   "worksheet": [
+ 
+    {
+      "type": "fillInTheBlankWithOptions"
+      "data": {
+        "sentence": "", // Should be in English // the fill in the blank space should be indicated by {BLANK}
+        "sentenceTranslation": "", // Should be in spanish
+        "options": [], // Should in English
+        "correctAnswer": "" // should be in english
+        "correctAnswerTranslation": "" // should be in spanish //should be complete, no blanks // DO NOT set {BLANK} in the spanish  translation  SHOULD BE THE FULL ANSWER SHOULD BE THE FULL ANSWER, YOU KEEP SENDMING ME INCOMPLETE ANSWERS
+      },
+    },
     {
       "type": "multipleChoice",
       "data": {
-        "question": "",
-        "options": ["", "", "", ""],
-        "correctAnswer": ""
-      }
-    },
-    {
-      "type": "fillInTheBlank",
-      "data": {
-        "sentence": "",
-        "answer": ""
-      }
-    },
-    {
-      "type": "translation",
-      "data": {
-        "spanish": "",
-        "english": ""
+        "question": "", // Should be in english
+        "questionTranslation": "", // Should be in spanish
+        "options": ["", "", "", ""], // Should be the english 
+        "correctAnswer": "" // Should be the english 
+        "correctAnswerTranslation": "" // Should be the spanish
       }
     }
   ]
@@ -211,5 +84,4 @@ Provide 5-7 exercises related to the lesson theme, choosing from the following t
 
 Ensure that the exercises are varied and relevant to the lesson content. Include at least one of each exercise type, and repeat types as needed to reach 5-7 total exercises.
 Do not wrap the json codes in JSON markers  
-
 `;
