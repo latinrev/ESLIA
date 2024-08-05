@@ -26,6 +26,11 @@ const config: Config = {
     },
 
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant('hover-active', ['&:hover', '.hover-active &']);
+      addVariant('touch-active', ['.touch-active &']);
+    }
+  ],
 };
 export default config;

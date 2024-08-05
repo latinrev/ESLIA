@@ -48,7 +48,7 @@ export const worksheetPrompt = ({
   topic,
   vocabulary,
   level
-}: { topic: string, vocabulary: [], level: string }) => `Generate content for an English lesson with the following details the instructions:
+}: { topic: string, vocabulary: string[], level: string }) => `Generate content for an English lesson with the following details the instructions:
 Topic: ${topic}
 The vocabulary for this lesson includes: [${vocabulary.join(", ")}]
 Level: ${level}

@@ -1,7 +1,11 @@
-import React, { FC } from "react";
+import React, { FC, ReactNode } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-type WorksheetCardProps = {};
+interface WorksheetCardProps {
+  children: ReactNode;
+  keyToUse: string | number;
+  className?: string;
+}
 
 const WorksheetCard: FC<WorksheetCardProps> = ({ children, keyToUse, className }) => {
   return (

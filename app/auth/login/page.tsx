@@ -1,14 +1,26 @@
+"use client";
+import { createClient } from "@/utils/supabase/client";
 import { login, signup } from "./actions";
 
 export default function LoginPage() {
+  const supabase = createClient();
+
   return (
-    <form className="text-textPrimary">
-      <label htmlFor="email">Email:</label>
-      <input className="text-textPrimary" id="email" name="email" type="email" required />
-      <label htmlFor="password">Password:</label>
-      <input className="text-textPrimary" id="password" name="password" type="password" required />
-      <button formAction={login}>Log in</button>
-      <button formAction={signup}>Sign up</button>
-    </form>
+    <div>
+      <button
+        onClick={() => {
+          supabase.auth.signInWithOAuth({
+            provider: "google",
+          });
+        }}>
+        GOOGLE
+      </button>
+      <button
+        onClick={() => {
+          supabase.auth.signOut({});
+        }}>
+        LOGOUT
+      </button>
+    </div>
   );
 }

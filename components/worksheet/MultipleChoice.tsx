@@ -4,14 +4,23 @@ import SingleOptionSelector from "../SingleOptionSelector";
 import { AnimatePresence, motion } from "framer-motion";
 import ContinueButton from "./ContinueButton";
 
+interface MultipleChoiceItem {
+  question: string;
+  questionTranslation: string;
+  options: string[];
+  correctAnswer: string;
+}
+
 interface MultipleChoiceProps {
-  // Define the props for your component here
+  goNext: () => void;
+  item: MultipleChoiceItem;
+  handleAnswer: (answer: { answer: string; item: MultipleChoiceItem }) => void;
 }
 
 const MultipleChoice: React.FC<MultipleChoiceProps> = ({ goNext, item, handleAnswer }) => {
-  const [selected, setSelectedOption] = useState<string>(null);
+  const [selected, setSelectedOption] = useState<string | null>(null);
 
-  const onSelectorChange = (value) => {
+  const onSelectorChange = (value: string) => {
     setSelectedOption(value);
   };
 
@@ -36,17 +45,20 @@ const MultipleChoice: React.FC<MultipleChoiceProps> = ({ goNext, item, handleAns
         </motion.article>
       </AnimatePresence>
       <SingleOptionSelector
-        selectedOption={selected}
+        selectedOption={selected || ""}
         setSelectedOption={setSelectedOption}
         onChange={onSelectorChange}
         options={item.options.map((option) => ({ label: option, value: option }))}
       />
       <ContinueButton
-        isVisible={selected}
+        isVisible={!!selected}
         onClick={() => {
-          handleAnswer(selected);
-          goNext();
-        }}></ContinueButton>
+          if (selected) {
+            handleAnswer({ answer: selected, item: item });
+            goNext();
+          }
+        }}
+      />
     </div>
   );
 };

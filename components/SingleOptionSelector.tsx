@@ -1,27 +1,41 @@
+import React from "react";
 import { motion } from "framer-motion";
 
-export default function SingleOptionSelector({ options, onChange, setSelectedOption, selectedOption }) {
-  const onClickButton = (e) => {
+interface Option {
+  label: string;
+  value: string;
+}
+
+interface SingleOptionSelectorProps {
+  options: Option[];
+  onChange?: (value: string) => void;
+  setSelectedOption: (value: string) => void;
+  selectedOption: string;
+}
+
+export default function SingleOptionSelector({ options, onChange, setSelectedOption, selectedOption }: SingleOptionSelectorProps) {
+  const onClickButton = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    if (onChange) onChange(e.currentTarget.value);
-    setSelectedOption(e.currentTarget.value);
+    const value = e.currentTarget.value;
+    if (onChange) onChange(value);
+    setSelectedOption(value);
   };
 
   return (
     <motion.div
-      className="grid w-full grid-flow-col content-between gap-8 px-6 text-2xl"
+      className="grid w-full content-between gap-8 px-6 text-lg md:grid-flow-col md:text-2xl"
       initial={{ y: 50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.2 }}>
       <input type="hidden" name="level" value={selectedOption} />
-      {options.map((option: { label: string; value: string }) => {
+      {options.map((option: Option) => {
         const isSelected = selectedOption === option.value;
         return (
           <motion.button
             onClick={onClickButton}
             key={option.value}
             value={option.value}
-            className={`px-12 py-3 border-primary rounded-2xl border 
+            className={`px-12 py-3 border-primary rounded-2xl border
               ${isSelected ? "text-textSecondary font-bold" : "text-textContrast"}`}
             initial={false}
             animate={{

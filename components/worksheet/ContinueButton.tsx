@@ -1,7 +1,13 @@
+import React from "react";
 import { motion } from "framer-motion";
 import StylizedButton from "../StylizedButton";
 
-export default function ContinueButton({ onClick, isVisible }) {
+interface ContinueButtonProps {
+  onClick: () => void;
+  isVisible: boolean;
+}
+
+export default function ContinueButton({ onClick, isVisible }: ContinueButtonProps) {
   return (
     <motion.div
       className="center"

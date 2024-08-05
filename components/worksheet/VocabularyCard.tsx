@@ -5,20 +5,35 @@ import { useWindowSize } from "react-use";
 import { AnimatePresence, motion } from "framer-motion";
 import StylizedButton from "../StylizedButton";
 import ContinueButton from "./ContinueButton";
+import BoldMatchingText from "./BoldMatchingText";
 
-interface VocabularyCardProps {
-  // Define the props for your component here
+interface VocabularyItem {
+  translation: string;
+  word: string;
+  example: string;
+  exampleTranslation: string;
 }
 
-const VocabularyCard: React.FC<VocabularyCardProps> = ({ item, handleAnswer, goNext, nextCard }) => {
+interface VocabularyCardProps {
+  item: VocabularyItem;
+  handleAnswer: (value: string) => void;
+  goNext: () => void;
+}
+
+interface Option {
+  label: string;
+  value: string;
+}
+
+const VocabularyCard: React.FC<VocabularyCardProps> = ({ item, handleAnswer, goNext }) => {
   const [selected, setSelectedOption] = useState<string>("");
   const [showConfetti, setShowConfetti] = useState<boolean>(false);
   const [revealed, setRevealed] = useState<boolean>(false);
   const { width, height } = useWindowSize();
 
-  const onSelectorChange = (value) => {
+  const onSelectorChange = (value: string) => {
     setSelectedOption(value);
-    value === "1" ? setShowConfetti(true) : setShowConfetti(false);
+    setShowConfetti(value === "1");
     handleAnswer(value);
   };
 
@@ -41,16 +56,11 @@ const VocabularyCard: React.FC<VocabularyCardProps> = ({ item, handleAnswer, goN
     }
   }, [showConfetti]);
 
-  function BoldMatchingText({ text, boldText }) {
-    if (!text || !boldText) return text;
-
-    return text.split(boldText).map((part, index, array) => (
-      <React.Fragment key={index}>
-        {part}
-        {index < array.length - 1 && <span className="font-bold">{boldText}</span>}
-      </React.Fragment>
-    ));
-  }
+  const options: Option[] = [
+    { label: "Me la se", value: "1" },
+    { label: "No recuerdo", value: "2" },
+    { label: "No me la se", value: "3" },
+  ];
 
   return (
     <article className="center w-full flex-col gap-4 p-4">
@@ -78,7 +88,7 @@ const VocabularyCard: React.FC<VocabularyCardProps> = ({ item, handleAnswer, goN
             </AnimatePresence>
           ) : (
             <motion.div className="cursor-pointer" whileHover={{ scale: 1.2 }}>
-              <h5 className="text-2xl" onClick={() => showAnswer()}>
+              <h5 className="text-2xl" onClick={showAnswer}>
                 Haz click para revelar la traduccion...
               </h5>
             </motion.div>
@@ -91,15 +101,12 @@ const VocabularyCard: React.FC<VocabularyCardProps> = ({ item, handleAnswer, goN
             selectedOption={selected}
             setSelectedOption={setSelectedOption}
             onChange={onSelectorChange}
-            options={[
-              { label: "Me la se", value: "1" },
-              { label: "No recuerdo", value: "2" },
-              { label: "No me la se", value: "3" },
-            ]}
+            options={options}
           />
-          <ContinueButton onClick={handleContinue} isVisible={selected} />
+          <ContinueButton onClick={handleContinue} isVisible={!!selected} />
         </>
       )}
+      {showConfetti && <Confetti width={width} height={height} />}
     </article>
   );
 };

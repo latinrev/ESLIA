@@ -1,22 +1,28 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, PanInfo } from "framer-motion";
 import React, { useRef, useState } from "react";
 import ContinueButton from "./ContinueButton";
 import { Button } from "./Button";
 
-interface FillInTheBlanksProps {}
+interface FillInTheBlanksItem {
+  sentence: string;
+  sentenceTranslation: string;
+  options: string[];
+  correctAnswer: string;
+}
+
+interface FillInTheBlanksProps {
+  item: FillInTheBlanksItem;
+  goNext: () => void;
+  handleAnswer: (answer: { answer: string; item: FillInTheBlanksItem }) => void;
+}
 
 const FillInTheBlanks: React.FC<FillInTheBlanksProps> = ({ item, goNext, handleAnswer }) => {
-  const [droppedAnswer, setDroppedAnswer] = useState(null);
-  const dropZoneRef = useRef(null);
+  const [droppedAnswer, setDroppedAnswer] = useState<string | null>(null);
+  const dropZoneRef = useRef<HTMLSpanElement | null>(null);
 
-  const onSelectorChange = (value) => {
-    setSelectedOption(value);
-  };
-
-  const handleDragEnd = (event, info, option) => {
+  const handleDragEnd = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo, option: string) => {
     if (dropZoneRef.current) {
       const dropZoneRect = dropZoneRef.current.getBoundingClientRect();
-
       if (
         info.point.x >= dropZoneRect.left &&
         info.point.x <= dropZoneRect.right &&
@@ -56,7 +62,7 @@ const FillInTheBlanks: React.FC<FillInTheBlanksProps> = ({ item, goNext, handleA
           animate={{ rotateX: 0 }}>
           <div className="flex flex-col gap-4 rounded-3xl bg-primary p-10 text-center text-5xl text-secondary">
             <>
-              <h1> {renderSentence()}</h1>
+              <h1>{renderSentence()}</h1>
               {droppedAnswer !== null ? (
                 droppedAnswer === item.correctAnswer ? (
                   "Correcto!🎊"
@@ -74,25 +80,24 @@ const FillInTheBlanks: React.FC<FillInTheBlanksProps> = ({ item, goNext, handleA
       <div className="bg-[rgba(60, 60, 0.48)] flex flex-wrap justify-center gap-4">
         {!droppedAnswer &&
           item.options.map((option) => (
-            <>
-              <Button
-                key={option}
-                drag
-                dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
-                dragElastic={1}
-                onDragEnd={(event, info) => handleDragEnd(event, info, option)}
-                whileDrag={{ scale: 1.1 }}>
-                {option}
-              </Button>
-            </>
+            <Button
+              key={option}
+              drag
+              dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+              dragElastic={1}
+              onDragEnd={(event, info) => handleDragEnd(event, info, option)}
+              whileDrag={{ scale: 1.1 }}>
+              {option}
+            </Button>
           ))}
       </div>
       <ContinueButton
-        isVisible={droppedAnswer}
+        isVisible={!!droppedAnswer}
         onClick={() => {
-          handleAnswer(droppedAnswer);
+          handleAnswer({ answer: droppedAnswer || "", item: item });
           goNext();
-        }}></ContinueButton>
+        }}
+      />
     </div>
   );
 };

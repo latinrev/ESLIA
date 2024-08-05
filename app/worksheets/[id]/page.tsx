@@ -3,7 +3,7 @@ import { getWorksheet, getWorksheets } from "@/actions/calls";
 import { createClient } from "@/utils/supabase/server";
 import Worksheet from "./worksheet";
 
-export default async function PlanPage({ params }) {
+export default async function PlanPage({ params }: { params: { id: string } }) {
   const supabase = createClient();
   const queryClient = new QueryClient();
 

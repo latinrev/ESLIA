@@ -6,24 +6,36 @@ import StylizedButton from "@/components/StylizedButton";
 import { useState } from "react";
 import { useGenerateWorksheet } from "@/actions/mutations";
 import { Circles } from "react-loader-spinner";
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import Masonry from "react-responsive-masonry";
+import { useWindowSize } from "react-use";
+import { createClient } from "@/utils/supabase/client";
+
 export default function Plan() {
   const { data: worksheets, error, ...props } = useGetWorksheets();
   const { mutate, isPending } = useGenerateWorksheet();
   const [level, setLevel] = useState("1");
+  const { width, height } = useWindowSize();
 
+  console.log({ width });
   const handleOnSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     mutate(formData);
   };
+  const getColumnsCount = () => {
+    if (width < 800) return 1; // Mobile
+    if (width < 1280) return 2; // Small tablets
+    if (width < 1280) return 3; // Desktops
+    return 3; // Large desktops
+  };
 
   return (
-    <div className="grid w-full place-items-center gap-20">
-      <h1 className="text-7xl font-bold">Mis hojas de trabajo</h1>
+    <div className="grid w-full place-items-center gap-20 text-center">
+      <h1 className="text-4xl font-bold md:text-7xl">Mis hojas de trabajo</h1>
       <form onSubmit={handleOnSubmit} className="grid w-fit place-items-center gap-8">
-        <div className="mt-4 flex w-full flex-col items-center justify-center gap-4 text-3xl">
-          <h2 className="text-2xl font-bold text-textPrimary">Selecciona el nivel de dificultad</h2>
+        <div className="mt-4 flex w-full flex-col items-center justify-center gap-4 text-2xl">
+          <h2 className="text-lg font-bold text-textPrimary">Selecciona el nivel de dificultad</h2>
+
           <SingleOptionSelector
             selectedOption={level}
             setSelectedOption={setLevel}
@@ -35,17 +47,17 @@ export default function Plan() {
             ]}
           />
         </div>
-        <div className="flex w-full items-center justify-center gap-4">
+        <div className="center w-full flex-col gap-4 md:flex-row">
           <input
             name="topic"
             placeholder="Quiero aprender sobre..."
-            className="w-4/5 rounded-full border border-primary bg-transparent px-10 py-6"></input>
-          <StylizedButton loading={isPending} containerClassName="col-span-auto" type="submit">
+            className="rounded-full border border-primary bg-transparent px-10 py-6 md:w-4/5"></input>
+          <StylizedButton loading={isPending} containerClassName="w-full md:w-fit" type="submit">
             Generar
           </StylizedButton>
         </div>
       </form>
-      <Masonry columnsCount={3} gutter={20}>
+      <Masonry columnsCount={getColumnsCount()} gutter={20}>
         {isPending && (
           <Card
             item={{
@@ -54,7 +66,6 @@ export default function Plan() {
               description: "Generando todo acerca de lo que quieres saber!",
             }}></Card>
         )}
-
         {worksheets?.data?.sort().map((worksheet) => (
           <Card key={worksheet.id} to={`worksheets/${worksheet.id}`} item={worksheet}></Card>
         ))}
