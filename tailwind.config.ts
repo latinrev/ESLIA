@@ -28,7 +28,7 @@ const config: Config = {
   },
   plugins: [
     function ({ addVariant }) {
-      addVariant('hover-active', ['&:hover', '.hover-active &']);
+      addVariant('hover-active', ['&:group-hover', '.hover-active &']);
       addVariant('touch-active', ['.touch-active &']);
     }
   ],

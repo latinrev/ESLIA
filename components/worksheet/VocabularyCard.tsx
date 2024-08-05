@@ -106,7 +106,7 @@ const VocabularyCard: React.FC<VocabularyCardProps> = ({ item, handleAnswer, goN
           <ContinueButton onClick={handleContinue} isVisible={!!selected} />
         </>
       )}
-      {showConfetti && <Confetti width={width} height={height} />}
+      {/* {showConfetti && <Confetti width={width} height={height} />} */}
     </article>
   );
 };

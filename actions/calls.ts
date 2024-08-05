@@ -9,6 +9,7 @@ export const getWorksheets = async (supabase) => {
     .order('created_at', { ascending: false })
   console.log("FETCHING WORKSHEETS")
 
+  console.log({data,error})
   if (error) {
     console.error("Error fetching plans:", error);
     return { data: null, error };

@@ -1,5 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import ContinueButton from "./ContinueButton";
+import { useRouter } from "next/navigation";
+import { Button } from "./Button";
+import Link from "next/link";
 
 type ResultsProps = {
   data: {
@@ -22,6 +26,7 @@ type ResultsProps = {
 };
 
 const Results: React.FC<ResultsProps> = ({ data }) => {
+  const router = useRouter()
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -58,7 +63,7 @@ const Results: React.FC<ResultsProps> = ({ data }) => {
                   <motion.tr key={index} className="border-b border-black" variants={itemVariants}>
                     <td className="p-2">{item.word}</td>
                     <td className="p-2">{item.translation}</td>
-                    <td className="p-2">{["No me la se 😵😵", "No Recuerdo 🤔🤔", "Me la se ✅✅"][parseInt(item.confidence) - 1]}</td>
+                    <td className="p-2">{["No me la se 😵🥴", "No Recuerdo 🤔😅", "Me la se ✅🎉"][parseInt(item.confidence) - 1]}</td>
                   </motion.tr>
                 ))}
               </tbody>
@@ -88,6 +93,9 @@ const Results: React.FC<ResultsProps> = ({ data }) => {
           </table>
         </div>
       </motion.div>
+      <Link href='/worksheets'>
+        <Button>Volver a mis hojas de ejercicios</Button>
+      </Link>
     </motion.div>
   );
 };

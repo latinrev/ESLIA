@@ -20,8 +20,8 @@ export const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const internalClassName = !secondary
-    ? "flex w-fit items-center justify-center gap-4 rounded-2xl bg-primary px-8 py-3 text-3xl font-bold text-secondary"
-    : "flex w-fit items-center justify-center gap-4 rounded-2xl border-2 border-secondary bg-transparent px-8 py-3 text-3xl font-bold text-secondary";
+    ? "flex w-fit items-center justify-center gap-4 rounded-2xl bg-primary px-8 py-3 text-xl md:text-3xl font-bold text-secondary"
+    : "flex w-fit items-center justify-center gap-4 rounded-2xl border-2 border-secondary bg-transparent px-8 py-3 text-xl md:text-3xl font-bold text-secondary";
 
   return (
     <motion.button

@@ -8,7 +8,8 @@ import { useGenerateWorksheet } from "@/actions/mutations";
 import { Circles } from "react-loader-spinner";
 import Masonry from "react-responsive-masonry";
 import { useWindowSize } from "react-use";
-import { createClient } from "@/utils/supabase/client";
+import { motion, AnimatePresence } from "framer-motion";
+import { Button } from "@/components/worksheet/Button";
 
 export default function Plan() {
   const { data: worksheets, error, ...props } = useGetWorksheets();
@@ -30,7 +31,8 @@ export default function Plan() {
   };
 
   return (
-    <div className="grid w-full place-items-center gap-20 text-center">
+    <AnimatePresence initial={true} mode="wait" >
+    <motion.div initial={{opacity:0}} animate={{opacity:1}} className="grid w-full place-items-center gap-20 text-center">
       <h1 className="text-4xl font-bold md:text-7xl">Mis hojas de trabajo</h1>
       <form onSubmit={handleOnSubmit} className="grid w-fit place-items-center gap-8">
         <div className="mt-4 flex w-full flex-col items-center justify-center gap-4 text-2xl">
@@ -48,13 +50,18 @@ export default function Plan() {
           />
         </div>
         <div className="center w-full flex-col gap-4 md:flex-row">
-          <input
+          <motion.input
+            initial={{x:'-120%'}}
+            animate={{x:0}}
             name="topic"
             placeholder="Quiero aprender sobre..."
-            className="rounded-full border border-primary bg-transparent px-10 py-6 md:w-4/5"></input>
-          <StylizedButton loading={isPending} containerClassName="w-full md:w-fit" type="submit">
+            className="rounded-full border border-primary bg-transparent px-10 py-6 md:w-4/5"/>
+          <Button 
+          initial={{x:'120%'}}
+          animate={{x:0}}
+          loading={isPending} containerClassName="w-full md:w-fit" type="submit">
             Generar
-          </StylizedButton>
+          </Button>
         </div>
       </form>
       <Masonry columnsCount={getColumnsCount()} gutter={20}>
@@ -70,6 +77,7 @@ export default function Plan() {
           <Card key={worksheet.id} to={`worksheets/${worksheet.id}`} item={worksheet}></Card>
         ))}
       </Masonry>
-    </div>
+    </motion.div>
+    </AnimatePresence>
   );
 }

@@ -29,26 +29,26 @@ export const Card: React.FC<CardProps> = ({ to = "", item }) => {
     }
   }, [isTouchDevice]);
 
-  const activeClass = isTouchDevice ? (isActive ? "touch-active" : "") : "hover-active";
+  const activeClass = isTouchDevice ? (isActive ? "touch-active" : "") : "group-hover";
 
   return (
-    <div className={`perspective-1000 mt-20 w-full ${activeClass}`} onClick={toggleActive}>
-      <div className="transform-style-3d hover-active:rotate-y-3 touch-active:rotate-y-3 relative w-full p-1 transition-transform duration-75 ease-in-out">
-        <div className="duration-250 relative flex flex-col gap-8 rounded-3xl border-2 border-primary bg-bg px-4 pb-6 pt-20 font-bold text-textContrast shadow-2xl transition-all ease-in-out hover:shadow-primary hover-active:bg-primary hover-active:text-textSecondary touch-active:bg-primary touch-active:text-textSecondary">
+    <div className={`perspective-1000 mt-20 w-full group text-left`} onClick={toggleActive}>
+      <div className="transform-style-3d group:rotate-y-3 touch-active:rotate-y-3 relative w-full p-1 transition-transform duration-75 ease-in-out">
+        <div className="duration-250 relative flex flex-col gap-8 rounded-3xl border-2 border-primary bg-bg px-4 pb-6 pt-20 font-bold text-textContrast shadow-2xl transition-all ease-in-out group-hover:shadow-primary group-hover:bg-primary group-hover:text-textSecondary touch-active:bg-primary touch-active:text-textSecondary">
           <div className="absolute -top-20 left-0 right-0 flex justify-center">
-            <span className="flex h-36 w-36 items-center justify-center rounded-full border border-primary bg-bg text-6xl font-bold text-textSecondary transition-all duration-75 ease-in-out hover-active:animate-bounce hover-active:border-secondary hover-active:bg-primary touch-active:animate-bounce touch-active:border-secondary touch-active:bg-primary">
+            <span className="flex h-36 w-36 items-center justify-center rounded-full border border-primary bg-bg text-6xl font-bold text-textSecondary transition-all duration-75 ease-in-out group-hover:animate-bounce group-hover:border-secondary group-hover:bg-primary touch-active:animate-bounce touch-active:border-secondary touch-active:bg-primary">
               {item?.emoji}
             </span>
           </div>
-          <div className="duration-250 flex flex-col gap-4 p-4 transition-all ease-in-out hover-active:translate-y-[-10px] touch-active:translate-y-[-10px]">
-            <h4 className="w-full text-xl font-bold transition-all duration-75 ease-in-out hover-active:scale-105 touch-active:scale-105 md:text-3xl">
+          <div className="duration-250 flex flex-col gap-4 p-4 transition-all ease-in-out group-hover:translate-y-[-10px] touch-active:translate-y-[-10px]">
+            <h4 className="w-full text-4xl font-bold transition-all duration-75 ease-in-out group-hover:scale-105 touch-active:scale-105 md:text-4xl">
               {item?.title}
             </h4>
-            <p className="text-ellipsis text-xl font-normal transition-all duration-75 ease-in-out md:text-2xl">{item?.description}</p>
+            <p className="text-ellipsis text-2xl font-normal transition-all duration-75 ease-in-out md:text-2xl">{item?.description}</p>
           </div>
           <Link href={to}>
             <div className="duration-250 transition-all ease-in-out">
-              <button className="w-full translate-y-full transform self-center rounded-full border border-secondary bg-transparent py-4 text-3xl text-textSecondary opacity-0 shadow-2xl transition-all duration-75 ease-in-out hover:bg-bg hover:text-primary hover:shadow-2xl hover:shadow-bg hover-active:translate-y-0 hover-active:opacity-100 touch-active:translate-y-0 touch-active:opacity-100">
+              <button className="w-full translate-y-full transform self-center rounded-full border border-secondary bg-transparent py-4 text-3xl text-textSecondary opacity-0 shadow-2xl transition-all duration-75 ease-in-out hover:bg-bg hover:text-primary hover:shadow-2xl hover:shadow-bg group-hover:translate-y-0 group-hover:opacity-100 touch-active:translate-y-0 touch-active:opacity-100">
                 A estudiar!
               </button>
             </div>
