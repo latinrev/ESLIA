@@ -32,7 +32,10 @@ export default function Worksheets() {
 
   return (
     <AnimatePresence initial={true} mode="wait">
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="grid w-full place-items-center gap-8 text-center">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="mt-16 grid w-full place-items-center gap-8 text-center lg:mt-0">
         <h1 className="text-4xl font-bold md:text-7xl">Mis hojas de trabajo</h1>
         <form onSubmit={handleOnSubmit} className="grid w-fit place-items-center gap-8">
           <div className="mt-4 flex w-full flex-col items-center justify-center gap-4 text-2xl">
@@ -86,7 +89,7 @@ export default function Worksheets() {
           </Masonry>
         ) : (
           <motion.h1 initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} className="text-4xl font-bold">
-            🤔 Aqui aparecerian tus hojas de trabajo...
+            🤔 Aqui aparecerian tus hojas de ejercicios...
             <br />
             si tuvieras alguna! 🤯
             <br /> Intenta generar una arriba! 🎊

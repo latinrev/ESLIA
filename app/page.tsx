@@ -11,7 +11,7 @@ export default function Home() {
   const supabase = createClient();
   return (
     <AnimatePresence mode="wait" initial={true}>
-      <div className="flex flex-col gap-8">
+      <div className="mt-8 flex flex-col gap-8 lg:mt-0">
         <motion.div
           initial={{ y: "-5%", opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -32,7 +32,7 @@ export default function Home() {
               supabase.auth.signInWithOAuth({
                 provider: "google",
                 options: {
-                  redirectTo: "https://www.esliafacil.com/worksheets",
+                  redirectTo: "http://localhost:3000/worksheets", //" https://www.esliafacil.com/worksheets",
                 },
               });
             }}>
@@ -58,7 +58,7 @@ export default function Home() {
             item={{
               emoji: "🚀",
               title: "Aprendiendo ingles con ESLIA",
-              description: "Aca podras generar hojas de vocabulario y ejercicios que que te resultara increible para aprender ingles",
+              description: "Aca podras generar hojas de vocabulario y ejercicios que te resultaran increible para aprender ingles",
             }}
             withAction={false}
           />

@@ -55,7 +55,7 @@ THIS IS FOR AN ESL LESSON WORKSHEET, the worksheet must have exercises related t
 based on the level please do adjust the difficulty accordingly it should reflect the ${level}
 
 
-Provide 5-7 exercises for beginner 7-9 exercises for intermediate and 10-11 exercises for advanced. related to the lesson theme, choosing from the following types: multipleChoice and fillInTheBlankWithOptions Respond in this JSON format:
+Provide 7 exercises for beginner 9 exercises for intermediate and 11 exercises for advanced. related to the lesson theme, choosing from the following types: multipleChoice and fillInTheBlankWithOptions Respond in this JSON format:
 {
   "worksheet": [
  
@@ -82,6 +82,6 @@ Provide 5-7 exercises for beginner 7-9 exercises for intermediate and 10-11 exer
   ]
 }
 
-Ensure that the exercises are varied and relevant to the lesson content. Include at least one of each exercise type, and repeat types as needed to reach 5-7 exercises for beginner 7-9 exercises for intermediate and 10-11 exercises for advanced.
+Ensure that the exercises are varied and relevant to the lesson content. Include at least one of each exercise type, and repeat types as needed to reach 7 exercises for beginner 9 exercises for intermediate and 11 exercises for advanced.
 Do not wrap the json codes in JSON markers  
 `;
