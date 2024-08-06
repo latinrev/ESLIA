@@ -71,6 +71,14 @@ export default function Worksheets() {
 
         {worksheets.data.length > 0 || isPending ? (
           <Masonry columnsCount={getColumnsCount()} gutter={20}>
+            {isPending && (
+              <Card
+                item={{
+                  emoji: <Circles color="#fff" />,
+                  title: "Generando algo increible...",
+                  description: "Generando todo acerca de lo que quieres saber!",
+                }}></Card>
+            )}
             {worksheets?.data?.sort().map((worksheet) => (
               <Card key={worksheet.id} to={`worksheets/${worksheet.id}`} item={worksheet}></Card>
             ))}
