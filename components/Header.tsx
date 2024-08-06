@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { createClient } from "@/utils/supabase/client";
-import Signout from "./Signout";
 import { useRouter } from "next/navigation";
 
 export default function Header() {

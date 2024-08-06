@@ -3,7 +3,6 @@ import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import Providers from "./providers";
 import { cn } from "@/utils";
-import Signout from "@/components/Signout";
 import { createClient } from "@/utils/supabase/server";
 import Header from "@/components/Header";
 
