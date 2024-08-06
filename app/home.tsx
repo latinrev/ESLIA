@@ -23,11 +23,11 @@ export default function Home() {
 
   return (
     <AnimatePresence mode="wait" initial={true}>
-      <div className="mt-8 flex flex-col gap-8 lg:mt-0">
+      <div className="mt-14 flex flex-col gap-8 md:mt-8 lg:mt-0">
         <motion.div
           initial={{ y: "-5%", opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          className="relative flex h-full flex-col items-center gap-4 justify-self-start overflow-hidden pb-12 text-center md:p-12">
+          className="relative flex h-full flex-col items-center gap-4 justify-self-start overflow-hidden px-4 pb-12 text-center md:p-12">
           <h1 className="text-5xl font-bold md:px-10 md:text-6xl">
             Aprende <span className="font-black text-textContrast">Ingles facil</span> con la{" "}
             <span className="font-black text-textContrast">ayuda</span> <br /> de la{" "}

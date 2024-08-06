@@ -9,6 +9,8 @@ import MultipleChoice from "@/components/worksheet/MultipleChoice";
 import WorksheetCard from "@/components/worksheet/WorksheetCard";
 import FillInTheBlanks from "@/components/worksheet/FillInTheBlanks";
 import Results from "@/components/worksheet/Results";
+import { Button } from "@/components/worksheet/Button";
+import Link from "next/link";
 
 interface WorksheetProps {
   id: string;
@@ -109,7 +111,10 @@ export default function Worksheet({ id }: WorksheetProps) {
   };
 
   return (
-    <div className="relative w-full">
+    <div className="flex h-full w-full flex-col items-center justify-center">
+      <Link href={"/worksheets"} className="flex h-full w-full flex-col items-center justify-center">
+        <Button className="absolute top-5 text-sm md:text-base">Regresar al menu 😵</Button>
+      </Link>
       {!vocabularyAnswers && (
         <Vocabulary
           vocabularyData={data?.data?.vocabulary.vocabulary}

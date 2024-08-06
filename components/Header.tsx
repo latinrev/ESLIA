@@ -26,7 +26,9 @@ export default function Header() {
             <p>Con mucho amor y cariño para la comunidad hispano hablante - Joel Castillo 2024</p>
             {isSignedIn ? <button onClick={handleSignOut}>Cerrar Sesion</button> : <span>👋👋👋👋</span>}
           </div>
-          <div className="center md:hidden">{isSignedIn && <Button onClick={handleSignOut}>Cerrar Sesion</Button>}</div>
+          {pathname.includes("/worksheets") && (
+            <div className="center md:hidden">{isSignedIn && <Button onClick={handleSignOut}>Cerrar Sesion</Button>}</div>
+          )}
         </>
       )}
     </header>
