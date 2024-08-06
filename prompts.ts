@@ -15,7 +15,7 @@ Do not wrap the json codes in JSON markers
 export const vocabularyPrompt = ({ topic, level }: { topic: string, level: string }) => `Generate content for an English(for a native Spanish speaker) lesson with the following details the instructions should be in Spanish:
 Topic: ${topic}
 Level: ${level}
-Provide based 7-10 key word for the vocabulary section  based on the level:${level} add 2-3 vocabularies to the base. Respond in this JSON format:
+Provide based 7-10(beginner) or 10-12(intermediate) or 13-15(advanced) key word for the vocabulary section  based on the level:${level} adjust the difficulty for this section. Respond in this JSON format:
 {
   "vocabulary": [
     {
@@ -55,7 +55,7 @@ THIS IS FOR AN ESL LESSON WORKSHEET, the worksheet must have exercises related t
 based on the level please do adjust the difficulty accordingly it should reflect the ${level}
 
 
-Provide 5-7 exercises related to the lesson theme, choosing from the following types: multipleChoice and fillInTheBlankWithOptions Respond in this JSON format:
+Provide 5-7 exercises for beginner 7-9 exercises for intermediate and 10-11 exercises for advanced. related to the lesson theme, choosing from the following types: multipleChoice and fillInTheBlankWithOptions Respond in this JSON format:
 {
   "worksheet": [
  
@@ -82,6 +82,6 @@ Provide 5-7 exercises related to the lesson theme, choosing from the following t
   ]
 }
 
-Ensure that the exercises are varied and relevant to the lesson content. Include at least one of each exercise type, and repeat types as needed to reach the base 5-7 exercises based on the level:${level} add 2-3 exercises to the base.
+Ensure that the exercises are varied and relevant to the lesson content. Include at least one of each exercise type, and repeat types as needed to reach 5-7 exercises for beginner 7-9 exercises for intermediate and 10-11 exercises for advanced.
 Do not wrap the json codes in JSON markers  
 `;
