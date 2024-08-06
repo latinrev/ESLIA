@@ -24,7 +24,7 @@ export default async function RootLayout({
     <html lang="en">
       <body className={cn(outfit.className, "bg-bg relative")}>
         <Header />
-        <main className="flex h-full min-h-screen flex-col items-center justify-center overflow-hidden bg-bg px-8 py-12 pb-24 lg:px-20 lg:py-24">
+        <main className="flex h-full min-h-screen flex-col items-center justify-center overflow-hidden bg-bg px-2 py-12 pb-24 sm:px-8 lg:px-20 lg:py-24">
           <Providers>{children}</Providers>
         </main>
       </body>

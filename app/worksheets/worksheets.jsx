@@ -51,13 +51,13 @@ export default function Worksheets() {
               ]}
             />
           </div>
-          <div className="center w-full flex-col gap-4 md:flex-row">
+          <div className="center w-full flex-col gap-4 text-white md:flex-row">
             <motion.input
               initial={{ x: "-120%" }}
               animate={{ x: 0 }}
               name="topic"
               placeholder="Quiero aprender sobre..."
-              className="rounded-full border border-primary bg-transparent px-10 py-6 md:w-4/5"
+              className="rounded-full border border-primary bg-transparent px-4 py-6 md:w-4/5 md:px-10"
             />
             <Button
               disabled={isPending}
@@ -65,6 +65,7 @@ export default function Worksheets() {
               animate={{ x: 0 }}
               loading={isPending.toString()}
               containerClassName="w-full md:w-fit"
+              className="sm:w-fit"
               type="submit">
               {!isPending ? "Generar" : <Circles height={32} width={32} color="#fff" />}
             </Button>

@@ -61,7 +61,7 @@ const VocabularyCard: React.FC<VocabularyCardProps> = ({ item, handleAnswer, goN
   ];
 
   return (
-    <article className="center w-full flex-col gap-8 p-4">
+    <article className="center w-full flex-col gap-8 p-4 md:mt-6">
       <section className="flex w-full flex-col gap-4 text-6xl font-bold text-textSecondary">
         <h1 className="rounded-3xl bg-primary p-10 text-center">{item.translation}</h1>
         <div className="center flex-col rounded-3xl bg-primary p-10 text-center">
