@@ -1,7 +1,7 @@
 import { dehydrate, HydrationBoundary, QueryClient } from "@tanstack/react-query";
-import Plan from "./plan";
 import { getWorksheets } from "@/actions/calls";
 import { createClient } from "@/utils/supabase/server";
+import Worksheets from "./worksheets";
 
 export default async function PlanPage() {
   const supabase = createClient();
@@ -14,7 +14,7 @@ export default async function PlanPage() {
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
-      <Plan />
+      <Worksheets />
     </HydrationBoundary>
   );
 }

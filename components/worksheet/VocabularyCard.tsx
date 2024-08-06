@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SingleOptionSelector from "../SingleOptionSelector";
 import Confetti from "react-confetti";
-import { useWindowSize } from "react-use";
 import { AnimatePresence, motion } from "framer-motion";
 import StylizedButton from "../StylizedButton";
 import ContinueButton from "./ContinueButton";
@@ -29,7 +28,6 @@ const VocabularyCard: React.FC<VocabularyCardProps> = ({ item, handleAnswer, goN
   const [selected, setSelectedOption] = useState<string>("");
   const [showConfetti, setShowConfetti] = useState<boolean>(false);
   const [revealed, setRevealed] = useState<boolean>(false);
-  const { width, height } = useWindowSize();
 
   const onSelectorChange = (value: string) => {
     setSelectedOption(value);
@@ -106,7 +104,6 @@ const VocabularyCard: React.FC<VocabularyCardProps> = ({ item, handleAnswer, goN
           <ContinueButton onClick={handleContinue} isVisible={!!selected} />
         </>
       )}
-      {/* {showConfetti && <Confetti width={width} height={height} />} */}
     </article>
   );
 };

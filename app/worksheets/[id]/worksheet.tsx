@@ -402,8 +402,9 @@ export default function Worksheet({ id }: WorksheetProps) {
         )}
         {isCompleted && <h1>Worksheet completed</h1>}
       </WorksheetCard>
-      {(vocabularyAnswers && answers && isCompleted) && <Results data={{ vocabulary: Object.values(vocabularyAnswers), worksheet: Object.values(answers) }} />}
-      <button onClick={continueToNextCard}>continue</button>
+      {vocabularyAnswers && answers && isCompleted && (
+        <Results data={{ vocabulary: Object.values(vocabularyAnswers), worksheet: Object.values(answers) }} />
+      )}
     </div>
   );
 }
