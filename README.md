@@ -1,8 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+### Nombre del Proyecto
 
-First, run the development server:
+ESLIA
+
+### Descripción del Proyecto
+
+Permite generar hojas de vocabularios y ejercicios interactivos usando el SDK de vercel con OpenAI GPT 4.0 mini para estudiantes de ESL(English as a second langauge) basado en la dificultad y tema seleccionado por el usuario
+
+![image](https://github.com/user-attachments/assets/77f1c080-22d1-4e19-a436-117c81012a4b)
+
+Hojas de ejercicios
+![image](https://github.com/user-attachments/assets/c5449aba-0219-4b45-8e7a-bafcf0aee7ba)
+Vocabulario 
+![image](https://github.com/user-attachments/assets/2f0cbb8a-911a-4c31-aaa3-476ec60a252e)
+Ejercicios tipo 1
+![image](https://github.com/user-attachments/assets/3d57c8f3-571e-4403-8f1b-2ce2419ed4e5)
+Ejercicios tipo 2
+![image](https://github.com/user-attachments/assets/c04a986f-b0d0-4d7c-a1bb-1159096ebaef)
+
+
+### Repositorio de Código
+
+https://github.com/latinrev/ESLIA
+
+### Proyecto desplegado
+
+https://www.esliafacil.com/
+
+### Instrucciones de Configuración
+
+Para ejecutarlo se requiere un archivo .env.local
+```
+NEXT_PUBLIC_SUPABASE_URL
+NEXT_PUBLIC_SUPABASE_ANON_KEY
+OPENAI_API_KEY
+```
+
+Para crear la base de datos se debe crear un nuevo proyecto en supabase y  tener el Supabase CLI instalado luego correr el siguiente comando desde el root del proyecto 
+`supabase db push --db-url "YOUR_DATABASE_CONNECTION_STRING" schema.sql` -- Ejecuta todas las migraciones
 
 ```bash
 npm run dev
@@ -14,23 +49,5 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) con tu navegador para ver el proyecto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
