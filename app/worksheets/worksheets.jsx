@@ -64,7 +64,7 @@ export default function Worksheets() {
               loading={isPending}
               containerClassName="w-full md:w-fit"
               type="submit">
-              Generar
+              {!isPending ? "Generar" : <Circles height={32} width={32} color="#fff" />}
             </Button>
           </div>
         </form>
