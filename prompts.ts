@@ -63,10 +63,10 @@ Provide 5-7 exercises related to the lesson theme, choosing from the following t
       "type": "fillInTheBlankWithOptions"
       "data": {
         "sentence": "", // Should be in English // the fill in the blank space should be indicated by {BLANK}
-        "sentenceTranslation": "", // Should be in spanish
+        "sentenceTranslation": "", // should be in spanish, DO NOT INCLUDE THE {BLANK} PART, WHERE THE {BLANK} SHOULD BE PUT THE correctAnswerTranslation //should be complete, no blanks // DO NOT set {BLANK} in the spanish  translation  SHOULD BE THE FULL ANSWER SHOULD BE THE FULL ANSWER, YOU KEEP SENDMING ME INCOMPLETE ANSWERS
         "options": [], // Should in English
         "correctAnswer": "" // should be in english
-        "correctAnswerTranslation": "" // should be in spanish //should be complete, no blanks // DO NOT set {BLANK} in the spanish  translation  SHOULD BE THE FULL ANSWER SHOULD BE THE FULL ANSWER, YOU KEEP SENDMING ME INCOMPLETE ANSWERS
+        "correctAnswerTranslation": "" // should be in spanish, DO NOT INCLUDE THE {BLANK} PART, WHERE THE {BLANK} SHOULD BE PUT THE correctAnswerTranslation //should be complete, no blanks // DO NOT set {BLANK} in the spanish  translation  SHOULD BE THE FULL ANSWER SHOULD BE THE FULL ANSWER, YOU KEEP SENDMING ME INCOMPLETE ANSWERS
       },
     },
     {

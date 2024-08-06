@@ -73,6 +73,7 @@ export default function Worksheets() {
           <Masonry columnsCount={getColumnsCount()} gutter={20}>
             {isPending && (
               <Card
+                withAction={false}
                 item={{
                   emoji: <Circles color="#fff" />,
                   title: "Generando algo increible...",

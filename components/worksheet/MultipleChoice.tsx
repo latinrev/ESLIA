@@ -25,7 +25,7 @@ const MultipleChoice: React.FC<MultipleChoiceProps> = ({ goNext, item, handleAns
   };
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-8">
       <AnimatePresence initial={false} mode="wait">
         <motion.article key={selected} className="center w-full flex-col gap-4 p-4" initial={{ rotateX: 120 }} animate={{ rotateX: 0 }}>
           <section className="flex w-full flex-col gap-4 bg-primary p-10 text-6xl font-bold text-textSecondary">

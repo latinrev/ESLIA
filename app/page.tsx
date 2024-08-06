@@ -52,6 +52,7 @@ export default function Home() {
               title: "Es facil!",
               description: "Ya que todo es personalizado puedes aprender los temas que quieras cuando quieras",
             }}
+            withAction={false}
           />
           <Card
             item={{
@@ -59,13 +60,15 @@ export default function Home() {
               title: "Aprendiendo ingles con ESLIA",
               description: "Aca podras generar hojas de vocabulario y ejercicios que que te resultara increible para aprender ingles",
             }}
+            withAction={false}
           />
           <Card
             item={{
               emoji: "💸",
               title: "Gratis! ",
               description: "Puedes generar tantas hojas de ejercicios como quieras",
-            }}></Card>
+            }}
+            withAction={false}></Card>
         </motion.div>
       </div>
     </AnimatePresence>

@@ -10,9 +10,10 @@ interface Item {
 interface CardProps {
   to?: string;
   item?: Item;
+  withAction: boolean;
 }
 
-export const Card: React.FC<CardProps> = ({ to = "", item }) => {
+export const Card: React.FC<CardProps> = ({ to = "", item, withAction = true }) => {
   const [isTouchDevice, setIsTouchDevice] = useState<boolean>(false);
   const [isActive, setIsActive] = useState<boolean>(false);
 
@@ -46,13 +47,15 @@ export const Card: React.FC<CardProps> = ({ to = "", item }) => {
             </h4>
             <p className="text-ellipsis text-2xl font-normal transition-all duration-75 ease-in-out lg:text-2xl">{item?.description}</p>
           </div>
-          <Link href={to}>
-            <div className="duration-250 transition-all ease-in-out">
-              <button className="w-full translate-y-full transform self-center rounded-full border border-secondary bg-transparent py-4 text-3xl text-textSecondary opacity-0 shadow-2xl transition-all duration-75 ease-in-out hover:bg-bg hover:text-primary hover:shadow-2xl hover:shadow-bg group-hover:translate-y-0 group-hover:opacity-100 touch-active:translate-y-0 touch-active:opacity-100">
-                A estudiar!
-              </button>
-            </div>
-          </Link>
+          {withAction && (
+            <Link href={to}>
+              <div className="duration-250 transition-all ease-in-out">
+                <button className="w-full translate-y-full transform self-center rounded-full border border-secondary bg-transparent py-4 text-3xl text-textSecondary opacity-0 shadow-2xl transition-all duration-75 ease-in-out hover:bg-bg hover:text-primary hover:shadow-2xl hover:shadow-bg group-hover:translate-y-0 group-hover:opacity-100 touch-active:translate-y-0 touch-active:opacity-100">
+                  A estudiar!
+                </button>
+              </div>
+            </Link>
+          )}
         </div>
       </div>
     </div>
