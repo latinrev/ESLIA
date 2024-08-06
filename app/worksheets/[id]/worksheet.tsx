@@ -400,7 +400,6 @@ export default function Worksheet({ id }: WorksheetProps) {
         {!isCompleted && vocabularyAnswers && activeCardData?.type === "fillInTheBlankWithOptions" && (
           <FillInTheBlanks item={activeCardData.data as FillInTheBlankItem} goNext={continueToNextCard} handleAnswer={handleAnswer} />
         )}
-        {isCompleted && <h1>Worksheet completed</h1>}
       </WorksheetCard>
       {vocabularyAnswers && answers && isCompleted && (
         <Results data={{ vocabulary: Object.values(vocabularyAnswers), worksheet: Object.values(answers) }} />

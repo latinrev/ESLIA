@@ -32,7 +32,7 @@ export default function Home() {
               supabase.auth.signInWithOAuth({
                 provider: "google",
                 options: {
-                  redirectTo: "http://localhost:3000/worksheets", // https://www.esliafacil.com/worksheets",
+                  redirectTo: "https://www.esliafacil.com/worksheets",
                 },
               });
             }}>

@@ -23,7 +23,7 @@ export default function SingleOptionSelector({ options, onChange, setSelectedOpt
 
   return (
     <motion.div
-      className="grid w-full content-between gap-8 px-6 text-lg md:grid-flow-col md:text-2xl"
+      className="grid w-full content-between gap-8 px-6 text-lg md:text-2xl lg:grid-flow-col"
       initial={{ y: 50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.2 }}>

@@ -23,11 +23,16 @@ const FillInTheBlanks: React.FC<FillInTheBlanksProps> = ({ item, goNext, handleA
   const handleDragEnd = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo, option: string) => {
     if (dropZoneRef.current) {
       const dropZoneRect = dropZoneRef.current.getBoundingClientRect();
+      console.log({ dropZoneRect, info });
+
+      // Define a tolerance value (in pixels)
+      const tolerance = 50;
+
       if (
-        info.point.x >= dropZoneRect.left &&
-        info.point.x <= dropZoneRect.right &&
-        info.point.y >= dropZoneRect.top &&
-        info.point.y <= dropZoneRect.bottom
+        info.point.x >= dropZoneRect.left - tolerance &&
+        info.point.x <= dropZoneRect.right + tolerance &&
+        info.point.y >= dropZoneRect.top - tolerance &&
+        info.point.y <= dropZoneRect.bottom + tolerance
       ) {
         setDroppedAnswer(option);
       }

@@ -57,62 +57,20 @@ export default function Worksheets() {
               placeholder="Quiero aprender sobre..."
               className="rounded-full border border-primary bg-transparent px-10 py-6 md:w-4/5"
             />
-            <Button initial={{ x: "120%" }} animate={{ x: 0 }} loading={isPending} containerClassName="w-full md:w-fit" type="submit">
+            <Button
+              disabled={isPending}
+              initial={{ x: "120%" }}
+              animate={{ x: 0 }}
+              loading={isPending}
+              containerClassName="w-full md:w-fit"
+              type="submit">
               Generar
             </Button>
           </div>
         </form>
 
-        {worksheets.data.length > 0 || isPending || true ? (
+        {worksheets.data.length > 0 || isPending ? (
           <Masonry columnsCount={getColumnsCount()} gutter={20}>
-            <Card
-              item={{
-                emoji: "🏄🏼‍♂️",
-                title: "Es facil!",
-                description: "Ya que todo es personalizado puedes aprender los temas que quieras cuando quieras",
-              }}
-            />
-            <Card
-              item={{
-                emoji: "🚀",
-                title: "Aprendiendo ingles con ESLIA",
-                description: "Aca podras generar hojas de vocabulario y ejercicios que que te resultara increible para aprender ingles",
-              }}
-            />
-            <Card
-              item={{
-                emoji: "💸",
-                title: "Gratis! ",
-                description: "Puedes generar tantas hojas de ejercicios como quieras",
-              }}></Card>{" "}
-            <Card
-              item={{
-                emoji: "🏄🏼‍♂️",
-                title: "Es facil!",
-                description: "Ya que todo es personalizado puedes aprender los temas que quieras cuando quieras",
-              }}
-            />
-            <Card
-              item={{
-                emoji: "🚀",
-                title: "Aprendiendo ingles con ESLIA",
-                description: "Aca podras generar hojas de vocabulario y ejercicios que que te resultara increible para aprender ingles",
-              }}
-            />
-            <Card
-              item={{
-                emoji: "💸",
-                title: "Gratis! ",
-                description: "Puedes generar tantas hojas de ejercicios como quieras",
-              }}></Card>
-            {isPending && (
-              <Card
-                item={{
-                  emoji: <Circles color="#fff" />,
-                  title: "Generando algo increible...",
-                  description: "Generando todo acerca de lo que quieres saber!",
-                }}></Card>
-            )}
             {worksheets?.data?.sort().map((worksheet) => (
               <Card key={worksheet.id} to={`worksheets/${worksheet.id}`} item={worksheet}></Card>
             ))}
