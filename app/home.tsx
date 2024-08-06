@@ -87,14 +87,3 @@ export default function Home() {
     </AnimatePresence>
   );
 }
-
-//ESLIA
-//Permite generar hojas de vocabularios y ejercicios para estudiantes de ESL(English as a second langauge) basado en la dificultad y tema seleccionado por el usuario
-//Para ejercutarlo se requiere un archivo .env.local
-//NEXT_PUBLIC_SUPABASE_URL=
-//NEXT_PUBLIC_SUPABASE_ANON_KEY=
-//OPENAI_API_KEY =
-//figure out https://supabase.com/docs/guides/platform/migrating-and-upgrading-projects#transfer-to-a-different-organization
-//supabase db dump --db-url "$OLD_DB_URL" -f roles.sql --role-only
-//supabase db dump --db-url "$OLD_DB_URL" -f schema.sql
-//supabase db dump --db-url "$OLD_DB_URL" -f data.sql --use-copy --data-only
