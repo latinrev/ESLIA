@@ -34,7 +34,7 @@ export default function Worksheets() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="mt-16 grid w-full place-items-center gap-8 text-center lg:mt-0">
+        className="mt-20 grid w-full place-items-center gap-8 text-center lg:mt-0">
         <h1 className="text-4xl font-bold md:text-7xl">Mis hojas de trabajo</h1>
         <form onSubmit={handleOnSubmit} className="grid w-fit place-items-center gap-8">
           <div className="mt-4 flex w-full flex-col items-center justify-center gap-4 text-2xl">

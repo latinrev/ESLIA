@@ -13,11 +13,11 @@ export default function Header() {
 
   const handleSignOut = async () => {
     await signOut();
-    router.push("/"); // Or wherever you want to redirect after sign out
+    router.push("auth/signout"); // Or wherever you want to redirect after sign out
   };
 
   return (
-    <header className="absolute top-8 z-10 mb-4 flex w-full items-center justify-center px-4 text-center text-textContrast md:fixed md:top-3 md:px-10">
+    <header className="absolute top-8 z-10 flex w-full items-center justify-center px-4 text-center text-textContrast md:fixed md:top-3 md:px-10">
       <div className="hidden w-full items-center justify-between gap-8 rounded-full border border-primary bg-bg px-10 py-2 md:flex md:w-3/4">
         <p>ESLIA</p>
         <p>Con mucho amor y cariño para la comunidad hispano hablante - Joel Castillo 2024</p>
