@@ -30,7 +30,6 @@ const result = await generateWithPrompt(
     The whole response should be strictly on spanish, and you ARE to return the complete ${weekAmount} week plan `,
 )
 const parsedPlan = parseLearningSyllabus(result)
-console.log(parsedPlan)
 await require("fs/promises").writeFile("./ress.json", result);
 const { data, error: err } = await supabase.from('plans').insert({ user_id: userId, name: parsedPlan.plan_name }).select()
 
@@ -71,7 +70,6 @@ week.days.forEach(async (day) => {
         worksheet: worksheetData
       }).select()
 
-      console.log(days)
     })
 
 })

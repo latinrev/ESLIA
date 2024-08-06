@@ -2,7 +2,6 @@
 import { useGetWorksheets } from "@/actions/queries";
 import { Card } from "@/components/Card";
 import SingleOptionSelector from "@/components/SingleOptionSelector";
-import StylizedButton from "@/components/StylizedButton";
 import { useState } from "react";
 import { useGenerateWorksheet } from "@/actions/mutations";
 import { Circles } from "react-loader-spinner";
@@ -17,12 +16,12 @@ export default function Worksheets() {
   const [level, setLevel] = useState("1");
   const { width, height } = useWindowSize();
 
-  console.log({ width });
   const handleOnSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     mutate(formData);
   };
+
   const getColumnsCount = () => {
     if (width < 800) return 1; // Mobile
     if (width < 1280) return 2; // Small tablets
@@ -64,7 +63,7 @@ export default function Worksheets() {
               disabled={isPending}
               initial={{ x: "120%" }}
               animate={{ x: 0 }}
-              loading={isPending}
+              loading={isPending.toString()}
               containerClassName="w-full md:w-fit"
               type="submit">
               {!isPending ? "Generar" : <Circles height={32} width={32} color="#fff" />}

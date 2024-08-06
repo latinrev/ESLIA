@@ -100,7 +100,6 @@ export default function Worksheet({ id }: WorksheetProps) {
   };
 
   const continueToNextCard = () => {
-    console.log("continueToNextCard");
     if (data && activeCardIndex < data.data.worksheet.worksheet.length - 1) {
       setActiveCardIndex(activeCardIndex + 1);
     } else {
@@ -109,7 +108,6 @@ export default function Worksheet({ id }: WorksheetProps) {
     }
   };
 
-  console.log({ vocabularyAnswers, answers, data });
   const testData = {
     vocabularyAnswers: {
       "0": {

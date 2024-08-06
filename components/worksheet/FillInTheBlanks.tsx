@@ -23,7 +23,6 @@ const FillInTheBlanks: React.FC<FillInTheBlanksProps> = ({ item, goNext, handleA
   const handleDragEnd = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo, option: string) => {
     if (dropZoneRef.current) {
       const dropZoneRect = dropZoneRef.current.getBoundingClientRect();
-      console.log({ dropZoneRect, info });
 
       // Define a tolerance value (in pixels)
       const tolerance = 50;

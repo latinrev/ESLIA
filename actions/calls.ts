@@ -7,9 +7,7 @@ export const getWorksheets = async (supabase) => {
     .from("worksheets")
     .select(`title,description,id,emoji`)
     .order('created_at', { ascending: false })
-  console.log("FETCHING WORKSHEETS")
 
-  console.log({data,error})
   if (error) {
     console.error("Error fetching plans:", error);
     return { data: null, error };
@@ -22,7 +20,6 @@ export const getWorksheet = async ({ supabase, id }) => {
     .from("worksheets")
     .select(`*`)
     .eq('id', id).order('created_at', { ascending: false }).single()
-  console.log("FETCHING WORKSHEETS")
 
   if (error) {
     console.error("Error fetching plans:", error);

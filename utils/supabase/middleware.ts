@@ -34,13 +34,9 @@ export async function updateSession(request: NextRequest) {
   const {
     data: { user },
   } = await supabase.auth.getUser()
-
-  if (
-    !user &&
-    !request.nextUrl.pathname.startsWith('/')
-  ) {
-    // Redirect to the root path
-    const url = new URL('/', request.url)
+  if (!user && request.nextUrl.pathname === '/worksheets') {
+    const url = request.nextUrl.clone()
+    url.pathname = '/'
     return NextResponse.redirect(url)
   }
 
