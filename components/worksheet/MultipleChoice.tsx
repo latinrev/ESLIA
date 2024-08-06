@@ -28,19 +28,19 @@ const MultipleChoice: React.FC<MultipleChoiceProps> = ({ goNext, item, handleAns
     <div className="flex flex-col gap-8">
       <AnimatePresence initial={false} mode="wait">
         <motion.article key={selected} className="center w-full flex-col gap-4 p-4" initial={{ rotateX: 120 }} animate={{ rotateX: 0 }}>
-          <section className="flex w-full flex-col gap-4 bg-primary p-10 text-6xl font-bold text-textSecondary">
+          <section className="flex w-full flex-col gap-4 rounded-3xl bg-primary px-4 py-6 text-2xl font-bold text-textSecondary md:p-10 md:text-6xl">
             <motion.h1
               key={selected}
-              className="rounded-3xl text-center text-5xl"
+              className="rounded-3xl text-center text-2xl sm:text-5xl"
               initial={{ scale: 0, y: -50 }}
               animate={{ scale: [1.1, 1], y: 0 }}>
               {selected !== null
                 ? selected === item.correctAnswer
                   ? "Correcto!🎊"
                   : "Todos se equivocan de vez en cuando 🧐"
-                : item.question}
+                : item.question.replace("{BLANK}", "_________")}
             </motion.h1>
-            {selected === null && <span className="text-center text-2xl font-medium">{item.questionTranslation}</span>}
+            {selected === null && <span className="text-center text-lg font-medium md:text-2xl">{item.questionTranslation}</span>}
           </section>
         </motion.article>
       </AnimatePresence>

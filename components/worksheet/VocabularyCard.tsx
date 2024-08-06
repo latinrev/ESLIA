@@ -62,7 +62,7 @@ const VocabularyCard: React.FC<VocabularyCardProps> = ({ item, handleAnswer, goN
 
   return (
     <article className="center mt-10 w-full flex-col justify-around gap-8 p-4 md:mt-6">
-      <section className="flex w-full flex-col gap-4 text-6xl font-bold text-textSecondary">
+      <section className="flex w-full flex-col gap-4 text-3xl font-bold text-textSecondary md:text-6xl">
         <h1 className="rounded-3xl bg-primary p-10 text-center">{item.translation}</h1>
         <div className="center flex-col rounded-3xl bg-primary p-10 text-center">
           {revealed ? (
@@ -86,7 +86,7 @@ const VocabularyCard: React.FC<VocabularyCardProps> = ({ item, handleAnswer, goN
             </AnimatePresence>
           ) : (
             <motion.div className="cursor-pointer" whileHover={{ scale: 1.2 }}>
-              <h5 className="text-2xl" onClick={showAnswer}>
+              <h5 className="text-lg md:text-2xl" onClick={showAnswer}>
                 Haz click para revelar la traduccion...
               </h5>
             </motion.div>

@@ -12,7 +12,7 @@ import { Button } from "@/components/worksheet/Button";
 
 export default function Worksheets() {
   const { data: worksheets, error, ...props } = useGetWorksheets();
-  const { mutate, isPending } = useGenerateWorksheet();
+  const { mutate, isPending, isSuccess, isError } = useGenerateWorksheet();
   const [level, setLevel] = useState("1");
   const { width, height } = useWindowSize();
 
@@ -74,13 +74,13 @@ export default function Worksheets() {
 
         {worksheets.data.length > 0 || isPending ? (
           <Masonry columnsCount={getColumnsCount()} gutter={20}>
-            {isPending && (
+            {isPending && (!isSuccess || !isError) && (
               <Card
                 withAction={false}
                 item={{
                   emoji: <Circles color="#fff" />,
                   title: "Generando algo increible...",
-                  description: "Generando todo acerca de lo que quieres saber!",
+                  description: "Espera un momento mientras generamos todo acerca de lo que quieres saber!",
                 }}></Card>
             )}
             {worksheets?.data?.sort().map((worksheet) => (

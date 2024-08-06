@@ -46,7 +46,7 @@ const FillInTheBlanks: React.FC<FillInTheBlanksProps> = ({ item, goNext, handleA
         {index < parts.length - 1 && (
           <span
             ref={dropZoneRef}
-            className={`inline-block min-w-[200px] h-[3rem] mx-1 ${
+            className={` text-4xl inline-block min-w-[200px] h-[3rem] mx-1 ${
               droppedAnswer ? "bg-white text-black" : "bg-gray-300"
             } rounded px-2 align-bottom`}>
             {droppedAnswer}
@@ -64,9 +64,9 @@ const FillInTheBlanks: React.FC<FillInTheBlanksProps> = ({ item, goNext, handleA
           className="center w-full flex-col gap-4 p-4"
           initial={{ rotateX: 120 }}
           animate={{ rotateX: 0 }}>
-          <div className="flex flex-col gap-4 rounded-3xl bg-primary p-10 text-center text-5xl text-secondary">
+          <div className="flex flex-col gap-4 rounded-3xl bg-primary p-10 text-center text-2xl text-secondary md:text-5xl">
             <>
-              <h1>{renderSentence()}</h1>
+              <h1 className="">{renderSentence()}</h1>
               {droppedAnswer !== null ? (
                 droppedAnswer === item.correctAnswer ? (
                   "Correcto!🎊"
@@ -80,7 +80,7 @@ const FillInTheBlanks: React.FC<FillInTheBlanksProps> = ({ item, goNext, handleA
           </div>
         </motion.article>
       </AnimatePresence>
-      {!droppedAnswer && <h5 className="text-center text-4xl">Haz clic y arrastra la respuesta correcta</h5>}
+      {!droppedAnswer && <h5 className="text-center text-2xl md:text-4xl">Haz clic y arrastra la respuesta correcta</h5>}
       <div className="bg-[rgba(60, 60, 0.48)] flex flex-wrap justify-center gap-4">
         {!droppedAnswer &&
           item.options.map((option) => (

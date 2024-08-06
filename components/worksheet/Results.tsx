@@ -44,11 +44,13 @@ const Results: React.FC<ResultsProps> = ({ data }) => {
   };
 
   return (
-    <motion.div className="center w-full flex-col gap-8 text-2xl" variants={containerVariants} initial="hidden" animate="visible">
+    <motion.div className="center mt-10 w-full flex-col gap-8 text-2xl" variants={containerVariants} initial="hidden" animate="visible">
       <motion.h1 className="text-6xl font-bold" variants={itemVariants}>
         Tus resultados!
       </motion.h1>
-      <motion.div className="center w-full flex-col rounded-3xl bg-primary p-4 text-textSecondary md:p-10" variants={itemVariants}>
+      <motion.div
+        className="center hidden w-full flex-col rounded-3xl bg-primary p-4 text-textSecondary md:block md:p-10"
+        variants={itemVariants}>
         <div className="w-full">
           <h1 className="p-5 text-4xl font-bold">Vocabulario</h1>
           <div className="bg-primary-200 overflow-x-auto p-2 md:p-5">
@@ -94,6 +96,19 @@ const Results: React.FC<ResultsProps> = ({ data }) => {
             </tbody>
           </table>
         </div>
+      </motion.div>
+      {/*easily ugliest piece of code ive ever written, this what crunch does to a man, could mapped then display, oh well.*/}
+      <motion.div className="rounded-3xl bg-primary px-8 py-5 text-secondary">
+        <div>
+          <h1>Vocabulario - {data.vocabulary.length} </h1>
+          <h1>Me la se - {data.vocabulary.filter((item) => item.confidence === "1").length} ✅🎉</h1>
+          <h1>No recuerdo - {data.vocabulary.filter((item) => item.confidence === "2").length} 🤔😅</h1>
+          <h1>No me la se - {data.vocabulary.filter((item) => item.confidence === "3").length} 😵🥴</h1>
+        </div>
+        <br></br>
+        Ejercicios - {data.worksheet.length}:
+        <h1>Correctos - {data.worksheet.filter((item) => item.item.correctAnswer === item.answer).length}</h1>
+        <h1>A la proxima le atino - {data.worksheet.filter((item) => item.item.correctAnswer !== item.answer).length}</h1>
       </motion.div>
       <Link href="/worksheets">
         <Button>Volver a mis hojas de ejercicios</Button>

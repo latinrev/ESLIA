@@ -61,12 +61,24 @@ Provide 7 exercises for beginner 9 exercises for intermediate and 11 exercises f
  
     {
       "type": "fillInTheBlankWithOptions"
-      "data": {
-        "sentence": "", // Should be in English // the fill in the blank space should be indicated by {BLANK}
-        "sentenceTranslation": "", // should be in spanish, DO NOT INCLUDE THE {BLANK} PART, WHERE THE {BLANK} SHOULD BE PUT THE correctAnswerTranslation //should be complete, no blanks // DO NOT set {BLANK} in the spanish  translation  SHOULD BE THE FULL ANSWER SHOULD BE THE FULL ANSWER, YOU KEEP SENDMING ME INCOMPLETE ANSWERS
+      "data": { // There should only be a valid question and a valid answer not multiple per questions
+        "sentence": "", // Should be in English // the fill in the blank space should be indicated by {BLANK} only in this property all others should be complete sentences // ONLY A SINGLE BLANK PER QUESTION
+        "sentenceTranslation": "", SHOULD BE IN SPANISH, FULL SENTENCE, this has to be a full sentence with no {BLANKS}, NO {BLANKS} NO {BLANKS} NO {BLANKS} DO NOT PUT ANY {BLANKS} IN THIS PROPERTY
         "options": [], // Should in English
         "correctAnswer": "" // should be in english
-        "correctAnswerTranslation": "" // should be in spanish, DO NOT INCLUDE THE {BLANK} PART, WHERE THE {BLANK} SHOULD BE PUT THE correctAnswerTranslation //should be complete, no blanks // DO NOT set {BLANK} in the spanish  translation  SHOULD BE THE FULL ANSWER SHOULD BE THE FULL ANSWER, YOU KEEP SENDMING ME INCOMPLETE ANSWERS
+        "correctAnswerTranslation": "" // should be in spanish,
+        example:{
+        {
+        type: "fillInTheBlankWithOptions",
+        data:{
+          "sentence": "He is {BLANK} years old",
+          "sentenceTranslation": "El tiene cuarenta años", // THIS PROPERTY HAS TO BE COMPLETE, PLEASE PLEASE PLEASE DO NOT INCLUDE ANY BLANKS
+          "options": ["twenty", "thirty", "forty", "fifty"],
+          "correctAnswer": "forty",
+          "correctAnswerTranslation": "cuarenta"
+            }
+          }
+        }
       },
     },
     {
