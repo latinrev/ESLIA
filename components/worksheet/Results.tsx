@@ -106,9 +106,9 @@ const Results: React.FC<ResultsProps> = ({ data }) => {
           <h1>No me la se - {data.vocabulary.filter((item) => item.confidence === "3").length} 😵🥴</h1>
         </div>
         <br></br>
-        Ejercicios - {data.worksheet.length}:
-        <h1>Correctos - {data.worksheet.filter((item) => item.item.correctAnswer === item.answer).length}</h1>
-        <h1>A la proxima le atino - {data.worksheet.filter((item) => item.item.correctAnswer !== item.answer).length}</h1>
+        Ejercicios - {data.worksheet.length}
+        <h1>Correctos - {data.worksheet.filter((item) => item.item.correctAnswer === item.answer).length} ✅🎉 </h1>
+        <h1>A la proxima le atino - {data.worksheet.filter((item) => item.item.correctAnswer !== item.answer).length}🧐🧐</h1>
       </motion.div>
       <Link href="/worksheets">
         <Button>Volver a mis hojas de ejercicios</Button>

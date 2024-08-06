@@ -9,7 +9,7 @@ import Header from "@/components/Header";
 const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "ESL con Inteligencia Artificial",
+  title: "ESLIA, Ingles con IA",
   description:
     "Permite generar hojas de vocabularios y ejercicios interactivos usando AI para estudiantes de ESL(English as a second langauge) basado en la dificultad y tema seleccionado por el usuario",
   icons: [{ url: "/favicon.ico", sizes: "16x16", type: "image/png" }],

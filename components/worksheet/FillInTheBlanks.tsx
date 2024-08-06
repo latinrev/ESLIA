@@ -57,7 +57,7 @@ const FillInTheBlanks: React.FC<FillInTheBlanksProps> = ({ item, goNext, handleA
   };
 
   return (
-    <div className="flex flex-col gap-4 font-bold">
+    <div className="mt-4 flex flex-col gap-4 font-bold">
       <AnimatePresence initial={false} mode="wait">
         <motion.article
           key={droppedAnswer}
